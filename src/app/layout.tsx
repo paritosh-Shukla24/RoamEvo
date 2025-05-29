@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Gideon_Roman } from "next/font/google";
+import { Montserrat } from "next/font/google";
+
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -10,6 +14,19 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const gideonRoman = Gideon_Roman({
+  subsets: ["latin"],
+  weight: "400", // only one weight available
+  display: "swap",
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"], // include only the weights you need
+  display: "swap",
+  variable: "--font-montserrat", // this lets you use it in Tailwind CSS
 });
 
 export const metadata: Metadata = {
@@ -25,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${gideonRoman.className} ${montserrat.variable} antialiased`}
       >
         {children}
       </body>
