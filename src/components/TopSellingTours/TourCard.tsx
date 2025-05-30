@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { IoLocationSharp } from 'react-icons/io5';
-import { FaStar } from 'react-icons/fa';
 
 interface TourCardProps {
   destination: string;

@@ -1,27 +1,34 @@
 import Link from 'next/link';
 
-const Navbar = () => {
+interface NavbarProps {
+  variant?: 'light' | 'dark';
+}
+
+const Navbar = ({ variant = 'dark' }: NavbarProps) => {
+  const textColor = variant === 'light' ? 'text-[#000000B2]' : 'text-white';
+  const hoverColor = variant === 'light' ? 'hover:text-black' : 'hover:text-gray-300';
+
   return (
     <nav className="absolute top-0 w-full z-10 flex items-center justify-between px-6 md:px-12 py-6">
       <div className="logo">
-        <Link href="/" className="text-white text-2xl font-light">
+        <Link href="/" className={`${textColor} text-2xl font-light transition`}>
           RoamEvo
         </Link>
       </div>
       <div className="hidden md:flex space-x-8">
-        <Link href="/about-us" className="text-white hover:text-gray-300 transition">
+        <Link href="/about-us" className={`${textColor} ${hoverColor} transition`}>
           About Us
         </Link>
-        <Link href="/why-choose-us" className="text-white hover:text-gray-300 transition">
+        <Link href="/why-choose-us" className={`${textColor} ${hoverColor} transition`}>
           Why Choose Us
         </Link>
-        <Link href="/domestic-tours" className="text-white hover:text-gray-300 transition">
+        <Link href="/domestic-tours" className={`${textColor} ${hoverColor} transition`}>
           Domestic Tours
         </Link>
-        <Link href="/international-tours" className="text-white hover:text-gray-300 transition">
+        <Link href="/international-tours" className={`${textColor} ${hoverColor} transition`}>
           International Tours
         </Link>
-        <Link href="/trekking-camping" className="text-white hover:text-gray-300 transition">
+        <Link href="/trekking-camping" className={`${textColor} ${hoverColor} transition`}>
           Trekking & Camping
         </Link>
       </div>
