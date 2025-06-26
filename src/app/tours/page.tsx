@@ -10,6 +10,7 @@ import TourTabs from '@/components/TourTabs';
 import TourContent from '@/components/TourContent';
 import TourPricing from '@/components/TourPricing';
 import TripVibeCheck from '@/components/TripVibeCheck';
+import ThingsToCarry from '@/components/ThingsToCarry';
 
 export default function HimalayanRetreatPage() {
   const [activeTab, setActiveTab] = useState('overview');
@@ -20,23 +21,22 @@ export default function HimalayanRetreatPage() {
     { label: 'Byasi', href: '/destinations/byasi' },
     { label: 'Himalayan Foothills', href: '/destinations/himalayan-foothills' },
   ];
-
   // Example tour gallery images
   const tourImages = [
     {
-      src: 'https://placehold.co/600x400.png', 
+      src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', 
       alt: 'Byasi resort with mountain view'
     },
     {
-      src: 'https://placehold.co/400x350.png', 
+      src: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
       alt: 'River view in Himalayan foothills'
     },
     {
-      src: 'https://placehold.co/400x350.png', 
+      src: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
       alt: 'Resort swimming pool with mountain view'
     },
     {
-      src: 'https://placehold.co/400x350.png', 
+      src: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
       alt: 'Resort at night'
     }
   ];
@@ -63,11 +63,11 @@ export default function HimalayanRetreatPage() {
               <TourTabs activeTab={activeTab} onTabChange={setActiveTab} />
               <TourContent activeTab={activeTab} />
             </div>
-            
-            {/* Sidebar */}
+              {/* Sidebar */}
             <div className="lg:col-span-1">
               <TourPricing />
               <TripVibeCheck />
+              <ThingsToCarry />
             </div>
           </div>
         </main>

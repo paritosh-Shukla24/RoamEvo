@@ -1,25 +1,65 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+
 interface TourTabsProps {
   activeTab: string;
   onTabChange: (tab: string) => void;
 }
 
 const TourTabs = ({ activeTab, onTabChange }: TourTabsProps) => {
+  const [activeSection, setActiveSection] = useState('overview');
+
   const tabs = [
     { id: 'overview', label: 'Overview' },
     { id: 'itinerary', label: 'Itinerary' },
     { id: 'things-to-know', label: 'Things you should know' },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['overview', 'itinerary'];
+      let current = 'overview';
+
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 200) {
+            current = sectionId;
+          }
+        }
+      }
+
+      setActiveSection(current);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial position
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offsetTop = element.offsetTop - 120; // Account for navbar height
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    }
+    onTabChange(sectionId);
+  };
+
   return (
     <div className="flex border-b border-gray-200 mb-8">
       {tabs.map((tab) => (
         <button
           key={tab.id}
-          onClick={() => onTabChange(tab.id)}
+          onClick={() => scrollToSection(tab.id)}
           className={`pb-4 pr-8 mr-8 text-base transition-colors ${
-            activeTab === tab.id
+            activeSection === tab.id
               ? 'border-b-2 border-[#4A5B2D] text-[#4A5B2D] font-medium'
               : 'text-[#000000B2] hover:text-gray-700'
           }`}
