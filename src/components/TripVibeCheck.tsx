@@ -34,7 +34,7 @@ const TripVibeCheck = () => {
         {[...Array(5)].map((_, index) => (
           <span
             key={index}
-            className={`text-lg ${index < level ? getColor() : 'text-gray-300'}`}
+            className={`text-xl ${index < level ? getColor() : 'text-gray-300'}`}
           >
             {icon}
           </span>
@@ -44,12 +44,12 @@ const TripVibeCheck = () => {
   };
 
   return (
-    <div className="mt-12">
-      <h3 className="text-lg text-[#000000B2] mb-6">Trip&apos;s Vibe Check</h3>
+    <div className="mt-15">
+      <h3 className="text-4xl text-[#000000B2] mb-6">Trip&apos;s Vibe Check</h3>
       <div className="grid grid-cols-2 gap-y-6 gap-x-4">
         {vibes.map((vibe) => (
           <div key={vibe.category} className="flex flex-col">
-            <span className="text-sm text-[#000000B2] mb-2">{vibe.category}</span>
+            <span className="text-2xl text-[#000000B2] mb-2">{vibe.category}</span>
             {renderLevel(vibe.level, vibe.icon, vibe.category)}
           </div>
         ))}

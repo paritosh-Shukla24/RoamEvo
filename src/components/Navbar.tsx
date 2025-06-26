@@ -9,9 +9,9 @@ const Navbar = ({ variant = 'dark' }: NavbarProps) => {
   const hoverColor = variant === 'light' ? 'hover:text-black' : 'hover:text-gray-300';
 
   return (
-    <nav className="absolute top-0 w-full z-10 flex items-center justify-between px-6 md:px-12 py-6">
+    <nav className="absolute top-0 w-full z-10 flex items-center justify-between px-6 md:px-12 py-6 text-xl">
       <div className="logo">
-        <Link href="/" className={`${textColor} text-2xl font-light transition`}>
+        <Link href="/" className={`${textColor} text-3xl font-light transition`}>
           RoamEvo
         </Link>
       </div>
@@ -22,7 +22,7 @@ const Navbar = ({ variant = 'dark' }: NavbarProps) => {
         <Link href="/why-choose-us" className={`${textColor} ${hoverColor} transition`}>
           Why Choose Us
         </Link>
-        <Link href="/domestic-tours" className={`${textColor} ${hoverColor} transition`}>
+        <Link href="/tours" className={`${textColor} ${hoverColor} transition`}>
           Domestic Tours
         </Link>
         <Link href="/international-tours" className={`${textColor} ${hoverColor} transition`}>
