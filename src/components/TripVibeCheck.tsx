@@ -27,14 +27,12 @@ const TripVibeCheck = () => {
       if (category === 'Adventure') return 'text-orange-500';
       if (category === 'Nature') return 'text-green-500';
       return 'text-yellow-500';
-    };
-
-    return (
+    };    return (
       <div className="flex gap-1">
         {[...Array(5)].map((_, index) => (
           <span
             key={index}
-            className={`text-xl ${index < level ? getColor() : 'text-gray-300'}`}
+            className={`text-lg sm:text-xl ${index < level ? getColor() : 'text-gray-300'}`}
           >
             {icon}
           </span>
@@ -42,14 +40,13 @@ const TripVibeCheck = () => {
       </div>
     );
   };
-
   return (
-    <div className="mt-15">
-      <h3 className="text-4xl text-[#000000B2] mb-6">Trip&apos;s Vibe Check</h3>
-      <div className="grid grid-cols-2 gap-y-6 gap-x-4">
+    <div className="mt-8 sm:mt-12 md:mt-15">
+      <h3 className="text-2xl sm:text-3xl md:text-4xl text-[#000000B2] mb-4 sm:mb-6">Trip&apos;s Vibe Check</h3>
+      <div className="grid grid-cols-2 gap-y-4 sm:gap-y-6 gap-x-3 sm:gap-x-4">
         {vibes.map((vibe) => (
           <div key={vibe.category} className="flex flex-col">
-            <span className="text-2xl text-[#000000B2] mb-2">{vibe.category}</span>
+            <span className="text-lg sm:text-xl md:text-2xl text-[#000000B2] mb-1 sm:mb-2">{vibe.category}</span>
             {renderLevel(vibe.level, vibe.icon, vibe.category)}
           </div>
         ))}

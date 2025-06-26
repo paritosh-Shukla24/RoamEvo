@@ -51,14 +51,13 @@ const TourTabs = ({ activeTab, onTabChange }: TourTabsProps) => {
     }
     onTabChange(sectionId);
   };
-
   return (
-    <div className="flex border-b border-gray-200 mb-8">
+    <div className="flex border-b border-gray-200 mb-6 sm:mb-8 overflow-x-auto">
       {tabs.map((tab) => (
         <button
           key={tab.id}
           onClick={() => scrollToSection(tab.id)}
-          className={`pb-4 pr-8 mr-8 transition-colors text-2xl font-medium ${
+          className={`pb-3 sm:pb-4 pr-4 sm:pr-6 md:pr-8 mr-4 sm:mr-6 md:mr-8 transition-colors text-lg sm:text-xl md:text-2xl font-medium whitespace-nowrap ${
             activeSection === tab.id
               ? 'border-b-2 border-[#4A5B2D] text-[#4A5B2D] font-medium'
               : 'text-[#000000B2] hover:text-gray-700'

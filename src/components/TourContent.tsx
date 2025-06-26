@@ -117,12 +117,12 @@ const itineraryData: ItineraryDay[] = [
 
 const TourContent = ({ activeTab }: TourContentProps) => {
   return (
-    <div className="flex-1 space-y-16">
+    <div className="flex-1 space-y-8 sm:space-y-12 md:space-y-16">
       {/* Overview Section */}
-      <section id="overview" className="scroll-mt-24 text-xl">
-        <div className="space-y-6 text-[#000000] leading-relaxed text-justify">
+      <section id="overview" className="scroll-mt-20 sm:scroll-mt-24 text-base sm:text-lg md:text-xl">
+        <div className="space-y-4 sm:space-y-6 text-[#000000] leading-relaxed text-justify">
           <p>
-            The Himalayan Adventure Retreat is more than just a trip — it's a soul-
+            The Himalayan Adventure Retreat is more than just a trip — it&apos;s a soul-
             refreshing journey into the heart of the majestic Garhwal Himalayas. Designed
             for nature lovers, thrill seekers, and those looking to disconnect from the
             chaos of everyday life, this 5-day adventure offers a powerful blend of
@@ -133,10 +133,10 @@ const TourContent = ({ activeTab }: TourContentProps) => {
           <p>
             Your journey begins in Dehradun, from where we drive through winding roads
             surrounded by pine forests and river valleys to our peaceful riverside base
-            camp in Byasi. Here, you'll experience the thrill of white-water river
+            camp in Byasi. Here, you&apos;ll experience the thrill of white-water river
             rafting on the Ganga, hikes to hidden waterfalls, and morning yoga sessions by
             the river. Dive deep into the Himalayan lifestyle with a guided village visit,
-            where you'll connect with locals and learn about their traditions.
+            where you&apos;ll connect with locals and learn about their traditions.
           </p>
 
           <p>
@@ -148,27 +148,27 @@ const TourContent = ({ activeTab }: TourContentProps) => {
       </section>
 
       {/* Itinerary Section */}
-      <section id="itinerary" className="scroll-mt-24">
-        <div className="space-y-8">
-          <h2 className="text-5xl font-light text-[#4A5B2D] mb-12">Itinerary</h2>
+      <section id="itinerary" className="scroll-mt-20 sm:scroll-mt-24">
+        <div className="space-y-6 sm:space-y-8">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-[#4A5B2D] mb-8 sm:mb-10 md:mb-12">Itinerary</h2>
           <div className="relative">
             {/* Continuous timeline line - starts from below first dot and goes through all days */}
-            <div className="absolute left-[85px] top-15 w-px bg-[#4A5B2D]" 
-                 style={{ height: `calc(100% - 4rem)` }}></div>
+            <div className="absolute left-[51.5px] sm:left-[65px] md:left-[85px] top-8 sm:top-12 md:top-15 w-px bg-[#4A5B2D]" 
+                 style={{ height: `calc(100% - 2rem)` }}></div>
             
             {itineraryData.map((day, index) => (
-              <div key={day.day} className="relative flex mb-8">
+              <div key={day.day} className="relative flex mb-6 sm:mb-8">
                 {/* Day indicator positioned to the left of the dot */}
-                <div className="flex items-start mr-6">
-                  <div className="text-left mr-4 w-16 flex flex-col">
+                <div className="flex items-start mr-3 sm:mr-4 md:mr-6">
+                  <div className="text-left mr-2 sm:mr-3 md:mr-4 w-10 sm:w-12 md:w-16 flex flex-col">
                     <div
-                      className="text-2xl uppercase font-[family-name:--font-montserrat] font-semibold tracking-wider"
+                      className="text-sm sm:text-lg md:text-2xl uppercase font-[family-name:--font-montserrat] font-semibold tracking-wider"
                       style={{ color: '#4A5B2D99' }}
                     >
                       DAY
                     </div>
                     <div
-                      className="text-6xl font-[family-name:--font-montserrat] leading-none font-extrabold"
+                      className="text-3xl sm:text-4xl md:text-6xl font-[family-name:--font-montserrat] leading-none font-extrabold"
                       style={{ color: '#4A5B2D', fontWeight: 800 }}
                     >
                       {String(day.day).padStart(2, '0')}
@@ -176,37 +176,36 @@ const TourContent = ({ activeTab }: TourContentProps) => {
                   </div>
                   {/* Dot positioned to align with the number */}
                   <div
-                    className="w-3 h-3 rounded-full relative z-10"
+                    className="w-2 h-2 sm:w-3 sm:h-3 rounded-full relative z-10 mt-8 sm:mt-10 md:mt-14"
                     style={{ 
-                      backgroundColor: '#4A5B2D',
-                      marginTop: '55px' // Adjusted to align with middle of the large number
+                      backgroundColor: '#4A5B2D'
                     }}
                   ></div>
                 </div>
 
                 {/* Content */}
-                <div className="flex-1 pb-8 pl-4">
-                  <h3 className="text-2xl font-semibold text-[#4A5B2DCC] mb-2">{day.title}</h3>
+                <div className="flex-1 pb-6 sm:pb-8 pl-2 sm:pl-3 md:pl-4">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-[#4A5B2DCC] mb-2">{day.title}</h3>
 
                   <div className="flex items-center gap-2 mb-3">
-                    <div className="text-lg text-gray-600">
+                    <div className="text-sm sm:text-base md:text-lg text-gray-600">
                       <span className="font-semibold">Mood :</span> {day.description}
                     </div>
                   </div>
 
                   {/* Activities list */}
-                  <div className="space-y-2 mb-6">
+                  <div className="space-y-1 sm:space-y-2 mb-4 sm:mb-6">
                     {day.activities.map((activity, i) => (
                       <div key={i} className="flex items-start">
-                        <span className="text-lg text-gray-700 leading-relaxed">{activity}</span>
+                        <span className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">{activity}</span>
                       </div>
                     ))}
                   </div>
 
                   {/* Images */}
-                  <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="grid grid-cols-2 gap-2 sm:gap-4 mb-4 sm:mb-6">
                     {day.images.map((image, i) => (
-                      <div key={i} className="relative overflow-hidden rounded-lg h-32">
+                      <div key={i} className="relative overflow-hidden rounded-lg h-20 sm:h-24 md:h-32">
                         <div
                           className="w-full h-full bg-cover bg-center"
                           style={{ backgroundImage: `url('${image}')` }}
@@ -218,12 +217,12 @@ const TourContent = ({ activeTab }: TourContentProps) => {
                   {/* Places to visit */}
                   {day.places && (
                     <div>
-                      <h4 className="text-lg font-semibold text-[#4A5B2D] mb-2">
+                      <h4 className="text-base sm:text-lg font-semibold text-[#4A5B2D] mb-2">
                         Places we recommend you to visit
                       </h4>
                       <ul className="space-y-1">
                         {day.places.map((place, i) => (
-                          <li key={i} className="text-lg text-gray-600">• {place}</li>
+                          <li key={i} className="text-sm sm:text-base md:text-lg text-gray-600">• {place}</li>
                         ))}
                       </ul>
                     </div>
