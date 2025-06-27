@@ -38,6 +38,38 @@ export default function HimalayanRetreatPage() {
     {
       src: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
       alt: 'Resort at night'
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
+      alt: 'Ganges river flowing through mountains'
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
+      alt: 'Traditional mountain village'
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
+      alt: 'Resort dining area with mountain view'
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
+      alt: 'Spa and wellness center'
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
+      alt: 'Resort room with balcony view'
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
+      alt: 'Mountain sunrise from resort'
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
+      alt: 'Local cultural activities'
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1580654712603-eb43273aff33?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
+      alt: 'Evening campfire by the river'
     }
   ];
 
@@ -57,22 +89,28 @@ export default function HimalayanRetreatPage() {
           <TourGallery images={tourImages} />
           
           {/* Tour Details Section */}
-          <div className="mt-8 sm:mt-12 md:mt-16 grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
-            {/* Main Content */}
-            <div className="lg:col-span-2">
-              {/* Sticky Tour Tabs */}
-              <div className="lg:sticky lg:top-20 lg:z-20 bg-white">
-                <TourTabs activeTab={activeTab} onTabChange={setActiveTab} />
+          <div className="mt-8 sm:mt-12 md:mt-16">
+            <div className="grid grid-cols-1 lg:grid-cols-[2fr_1px_1fr] gap-8 sm:gap-12 md:gap-16">
+              {/* Main Content */}
+              <div className="lg:pr-8">
+                {/* Sticky Tour Tabs */}
+                <div className="lg:sticky lg:top-20 lg:z-20 bg-white">
+                  <TourTabs activeTab={activeTab} onTabChange={setActiveTab} />
+                </div>
+                <TourContent activeTab={activeTab} />
               </div>
-              <TourContent activeTab={activeTab} />
-            </div>
+              
+              {/* Vertical Separator Line */}
+              <div className="hidden lg:block w-px bg-[#000000B2] sticky top-24 h-96"></div>
+              
               {/* Sidebar */}
-            <div className="lg:col-span-1">
-              {/* Sticky Sidebar */}
-              <div className="lg:sticky lg:top-24 lg:h-100vh lg:overflow-y-auto space-y-6 sm:space-y-8">
-                <TourPricing />
-                <TripVibeCheck />
-                <ThingsToCarry />
+              <div className="lg:pl-8">
+                {/* Sticky Sidebar */}
+                <div className="lg:sticky lg:top-24 lg:h-100vh lg:overflow-y-auto space-y-6 sm:space-y-8">
+                  <TourPricing />
+                  <TripVibeCheck />
+                  <ThingsToCarry />
+                </div>
               </div>
             </div>
           </div>
