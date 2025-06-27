@@ -1,6 +1,3 @@
-'use client';
-
-import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -13,8 +10,6 @@ import TripVibeCheck from '@/components/TripVibeCheck';
 import ThingsToCarry from '@/components/ThingsToCarry';
 
 export default function HimalayanRetreatPage() {
-  const [activeTab, setActiveTab] = useState('overview');
-
   // Example breadcrumb items
   const breadcrumbItems = [
     { label: 'Rishikesh', href: '/destinations/rishikesh' },
@@ -95,9 +90,9 @@ export default function HimalayanRetreatPage() {
               <div className="lg:pr-8">
                 {/* Sticky Tour Tabs */}
                 <div className="lg:sticky lg:top-20 lg:z-20 bg-white">
-                  <TourTabs activeTab={activeTab} onTabChange={setActiveTab} />
+                  <TourTabs />
                 </div>
-                <TourContent activeTab={activeTab} />
+                <TourContent />
               </div>
               
               {/* Vertical Separator Line */}

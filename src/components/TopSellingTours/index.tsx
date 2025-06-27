@@ -20,9 +20,8 @@ const TourCard = ({ destination, rating, reviews, title, imageSrc, price, itiner
         <Image 
           src={imageSrc} 
           alt={title} 
-          layout="fill"
-          objectFit="cover"
-          className="rounded-lg"
+          fill
+          className="rounded-lg object-cover"
         />
       </div>
       

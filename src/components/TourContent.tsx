@@ -1,7 +1,3 @@
-interface TourContentProps {
-  activeTab: string;
-}
-
 interface ItineraryDay {
   day: number;
   title: string;
@@ -135,7 +131,7 @@ const notIncludedItems = [
   'Tips and optional donations'
 ];
 
-const TourContent = ({ activeTab }: TourContentProps) => {
+const TourContent = () => {
   return (
     <div className="flex-1 space-y-8 sm:space-y-12 md:space-y-16">
       {/* Overview Section */}
@@ -176,7 +172,7 @@ const TourContent = ({ activeTab }: TourContentProps) => {
             <div className="absolute left-[51.5px] sm:left-[65px] md:left-[85px] top-8 sm:top-12 md:top-15 w-px bg-[#4A5B2D]" 
                  style={{ height: `calc(100% - 3.6rem)` }}></div>
             
-            {itineraryData.map((day, index) => (
+            {itineraryData.map((day) => (
               <div key={day.day} className="relative flex mb-6 sm:mb-8">
                 {/* Day indicator positioned to the left of the dot */}
                 <div className="flex items-start mr-3 sm:mr-4 md:mr-6">

@@ -3,11 +3,10 @@
 import { useEffect, useState } from 'react';
 
 interface TourTabsProps {
-  activeTab: string;
-  onTabChange: (tab: string) => void;
+  onTabChange?: (tab: string) => void;
 }
 
-const TourTabs = ({ activeTab, onTabChange }: TourTabsProps) => {
+const TourTabs = ({ onTabChange = () => {} }: TourTabsProps) => {
   const [activeSection, setActiveSection] = useState('overview');
   const [isScrolling, setIsScrolling] = useState(false);
 

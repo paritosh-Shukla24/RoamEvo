@@ -1,4 +1,4 @@
-import Navbar from '@/components/Navbar';
+import ScrollNavbar from '@/components/ScrollNavbar';
 import Footer from '@/components/Footer';
 import MeetTheTeam from '@/components/MeetTheTeam';
 import ExperienceStats from '@/components/ExperienceStats';
@@ -6,9 +6,9 @@ import ExperienceStats from '@/components/ExperienceStats';
 export default function AboutUsPage() {
   return (
     <main className="relative min-h-screen">
-      <Navbar />
+      <ScrollNavbar />
       <div
-        className="relative h-screen w-full flex flex-col justify-end items-start text-white px-8 md:px-16 lg:px-24 pb-16 md:pb-20 lg:pb-24"
+        className="relative h-screen w-full flex flex-col justify-end items-start text-white px-8 md:px-16 lg:px-24 pb-16 md:pb-20 lg:pb-24 -mt-16 sm:-mt-20 md:-mt-21"
         style={{
           backgroundImage: "url('/images/about-background.png')", // Replace with your image path
           backgroundSize: 'cover',
@@ -20,7 +20,7 @@ export default function AboutUsPage() {
 
         <div className="relative z-10 w-full max-w-none" style={{ width: '80%' }}>
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif mb-8 leading-tight">
-            Welcome to RoamEvo –<br />
+            Welcome to RoamEvo &apos;—&apos;<br />
             Where Adventure Meets Soul
           </h1>
           
