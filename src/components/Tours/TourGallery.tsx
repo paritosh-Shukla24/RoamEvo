@@ -66,12 +66,12 @@ const TourGallery = ({ images }: TourGalleryProps) => {
 
   return (
     <>
-      <div className="mb-6 sm:mb-8">
+      <div className="mb-4 sm:mb-6 lg:mb-8">
         {/* Desktop Layout */}
-        <div className="hidden lg:grid lg:grid-cols-2 gap-4">
+        <div className="hidden lg:grid lg:grid-cols-2 gap-3 xl:gap-4">
           {/* Main large image */}
           <div 
-            className="relative rounded-lg overflow-hidden h-[500px] cursor-pointer group"
+            className="relative rounded-lg overflow-hidden h-[350px] xl:h-[400px] cursor-pointer group"
             onClick={() => handleImageClick(0)}
           >
             <Image
@@ -83,16 +83,16 @@ const TourGallery = ({ images }: TourGalleryProps) => {
               priority
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent flex items-center justify-center">
-              <div className="text-white text-7xl font-bold tracking-wider text-center">
+              <div className="text-white text-4xl xl:text-5xl font-bold tracking-wider text-center">
                 <div>BYASI</div>
-                <div className="text-right -mt-2">RISH</div>
+                <div className="text-right -mt-1 xl:-mt-2">RISH</div>
               </div>
             </div>
           </div>
 
           {/* Right side - smaller images */}
           <div className="relative">
-            <div className="grid grid-rows-3 gap-4 h-[500px]">
+            <div className="grid grid-rows-3 gap-3 xl:gap-4 h-[350px] xl:h-[400px]">
               {images.slice(1, 4).map((image, index) => (
                 <div 
                   key={index + 1} 
@@ -117,7 +117,7 @@ const TourGallery = ({ images }: TourGalleryProps) => {
                 setSelectedImageIndex(0);
                 handleImageClick(0);
               }}
-              className="absolute bottom-4 right-4 bg-white/90 hover:bg-white text-gray-800 px-4 py-2 rounded-lg shadow-lg transition-all duration-200 flex items-center gap-2"
+              className="absolute bottom-3 right-3 bg-white/90 hover:bg-white text-gray-800 px-3 py-2 rounded-lg shadow-lg transition-all duration-200 flex items-center gap-2 text-sm"
             >
               <PhotoIcon className="w-4 h-4" />
               View All ({images.length})
@@ -129,7 +129,7 @@ const TourGallery = ({ images }: TourGalleryProps) => {
         <div className="lg:hidden">
           {/* Main image for mobile */}
           <div 
-            className="relative rounded-lg overflow-hidden h-64 sm:h-80 md:h-96 cursor-pointer"
+            className="relative rounded-lg overflow-hidden h-48 sm:h-64 md:h-80 cursor-pointer"
             onClick={() => handleImageClick(0)}
           >
             <Image
@@ -141,16 +141,16 @@ const TourGallery = ({ images }: TourGalleryProps) => {
               priority
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent flex items-center justify-center">
-              <div className="text-white text-3xl sm:text-4xl md:text-5xl font-bold tracking-wider text-center">
+              <div className="text-white text-2xl sm:text-3xl md:text-4xl font-bold tracking-wider text-center">
                 <div>BYASI</div>
-                <div className="text-right -mt-1 sm:-mt-2">RISH</div>
+                <div className="text-right -mt-1">RISH</div>
               </div>
             </div>
           </div>
 
           {/* Limited images grid for mobile - no scrolling */}
-          <div className="mt-4">
-            <div className="grid grid-cols-4 gap-3 sm:gap-4">
+          <div className="mt-3">
+            <div className="grid grid-cols-4 gap-2 sm:gap-3">
               {images.slice(1, 5).map((image, index) => {
                 const actualIndex = index + 1;
                 const isLastVisibleImage = index === 3; // Last of the 4 visible images

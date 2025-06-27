@@ -12,13 +12,13 @@ const ThingsToCarry = () => {
     'Personal medications'
   ];
   return (
-    <div className="mt-8 sm:mt-12 md:mt-15">
-      <h3 className="text-2xl sm:text-3xl md:text-4xl text-[#000000B2] mb-4 sm:mb-6">Things to Carry</h3>
-      <div className="space-y-2 sm:space-y-3">
+    <div className="mt-4 sm:mt-6">
+      <h3 className="text-lg sm:text-xl lg:text-2xl text-[#000000B2] mb-2 sm:mb-3">Things to Carry</h3>
+      <div className="space-y-1.5">
         {carryItems.map((item, index) => (
-          <div key={index} className="flex items-start">
-            <span className="text-gray-400 mr-2 sm:mr-3 mt-1">•</span>
-            <span className="text-base sm:text-lg md:text-xl text-gray-700">{item}</span>
+          <div key={index} className="flex items-center">
+            <span className="text-gray-400 mr-2">•</span>
+            <span className="text-xs sm:text-sm lg:text-base text-gray-700">{item}</span>
           </div>
         ))}
       </div>

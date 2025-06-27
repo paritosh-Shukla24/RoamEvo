@@ -5,7 +5,7 @@ export default function AboutUsPage() {
   return (
     <div className="relative">
       <div
-        className="relative h-screen w-full flex flex-col justify-end items-start text-white px-8 md:px-16 lg:px-24 pb-16 md:pb-20 lg:pb-24 -mt-16 sm:-mt-21 md:-mt-21"
+        className="relative h-screen w-full flex flex-col justify-end items-start text-white px-8 md:px-16 lg:px-24 pb-16 md:pb-20 lg:pb-24"
         style={{
           backgroundImage: "url('/images/about-background.png')", // Replace with your image path
           backgroundSize: 'cover',

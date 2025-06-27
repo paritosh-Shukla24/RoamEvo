@@ -22,8 +22,8 @@ const ScrollNavbar = ({ startDark = false }: ScrollNavbarProps) => {
 
   // For pages with hero backgrounds (home, about-us)
   const heroNavbarClasses = `
-    sticky top-0 w-full z-50 transition-all duration-300 ease-in-out
-    flex items-center justify-between px-4 sm:px-6 md:px-12 py-4 sm:py-6 text-lg sm:text-xl
+    fixed top-0 w-full z-50 transition-all duration-300 ease-in-out
+    flex items-center justify-between px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-base sm:text-lg
     border-b
     ${isScrolled 
       ? 'bg-white text-black border-gray-200' 
@@ -34,7 +34,7 @@ const ScrollNavbar = ({ startDark = false }: ScrollNavbarProps) => {
   // For pages without hero backgrounds (tours, etc.)
   const standardNavbarClasses = `
     sticky top-0 w-full z-50 transition-all duration-300 ease-in-out
-    flex items-center justify-between px-4 sm:px-6 md:px-12 py-4 sm:py-6 text-lg sm:text-xl
+    flex items-center justify-between px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-base sm:text-lg
     bg-white text-black border-b
     ${isScrolled ? 'border-gray-200' : 'border-transparent'}
   `;
@@ -46,11 +46,11 @@ const ScrollNavbar = ({ startDark = false }: ScrollNavbarProps) => {
   return (
     <nav className={navbarClasses}>
       <div className="logo">
-        <Link href="/" className={`${textColor} text-2xl sm:text-3xl font-light transition-colors duration-300`}>
+        <Link href="/" className={`${textColor} text-xl sm:text-2xl font-light transition-colors duration-300`}>
           RoamEvo
         </Link>
       </div>
-      <div className="hidden lg:flex space-x-6 xl:space-x-8">
+      <div className="hidden lg:flex space-x-4 xl:space-x-6">
         <Link href="/about-us" className={`${textColor} ${hoverColor} transition-colors duration-300`}>
           About Us
         </Link>
@@ -69,7 +69,7 @@ const ScrollNavbar = ({ startDark = false }: ScrollNavbarProps) => {
       </div>
       <div className="lg:hidden">
         {/* Mobile menu button */}
-        <button className={`${textColor} text-2xl transition-colors duration-300`}>☰</button>
+        <button className={`${textColor} text-xl transition-colors duration-300`}>☰</button>
       </div>
     </nav>
   );

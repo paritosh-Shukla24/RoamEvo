@@ -9,8 +9,8 @@ interface BreadcrumbProps {
 
 const Breadcrumb = ({ items }: BreadcrumbProps) => {
   return (
-    <div className="flex items-center text-base sm:text-lg md:text-xl text-[#000000B2] py-1 sm:py-2 overflow-x-auto">
-      <IoLocationOutline className="text-[#4A5B2D] mr-1 sm:mr-2 flex-shrink-0" size={18} />
+    <div className="flex items-center text-sm sm:text-base lg:text-lg text-[#000000B2] py-1 overflow-x-auto">
+      <IoLocationOutline className="text-[#4A5B2D] mr-1 sm:mr-2 flex-shrink-0" size={16} />
       {items.map((item, index) => (
         <span key={item.href} className="whitespace-nowrap">
           {index > 0 && <span className="mx-1 sm:mx-2">–</span>}

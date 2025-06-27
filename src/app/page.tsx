@@ -6,7 +6,7 @@ import DreamDestinations from "@/components/DreamDestinations";
 export default function Home() {
   return (
     <div className="relative">
-      <div className="relative w-full h-screen -mt-16 sm:-mt-21">
+      <div className="relative w-full h-screen">
         {/* Background Image */}
         <div
           className="absolute inset-0 z-0 bg-cover bg-center"

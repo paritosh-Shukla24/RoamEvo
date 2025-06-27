@@ -133,10 +133,10 @@ const notIncludedItems = [
 
 const TourContent = () => {
   return (
-    <div className="flex-1 space-y-8 sm:space-y-12 md:space-y-16">
+    <div className="flex-1 space-y-6 sm:space-y-8 lg:space-y-10">
       {/* Overview Section */}
-      <section id="overview" className="scroll-mt-44 text-base sm:text-lg md:text-xl sm:mt-6">
-        <div className="space-y-4 sm:space-y-6 text-[#000000] leading-relaxed text-justify">
+      <section id="overview" className="scroll-mt-44 text-sm sm:text-base lg:text-lg sm:mt-6">
+        <div className="space-y-3 sm:space-y-4 text-[#000000] leading-relaxed text-justify">
           <p>
             The Himalayan Adventure Retreat is more than just a trip — it&apos;s a soul-
             refreshing journey into the heart of the majestic Garhwal Himalayas. Designed
@@ -165,26 +165,26 @@ const TourContent = () => {
 
       {/* Itinerary Section */}
       <section id="itinerary" className="scroll-mt-44">
-        <div className="space-y-6 sm:space-y-8">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-[#4A5B2D] mb-8 sm:mb-10 md:mb-12">Itinerary</h2>
+        <div className="space-y-4 sm:space-y-6">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light text-[#4A5B2D] mb-6 sm:mb-8 lg:mb-10">Itinerary</h2>
           <div className="relative">
             {/* Continuous timeline line - starts from below first dot and goes through all days */}
-            <div className="absolute left-[51.5px] sm:left-[65px] md:left-[85px] top-8 sm:top-12 md:top-15 w-px bg-[#4A5B2D]" 
-                 style={{ height: `calc(100% - 3.6rem)` }}></div>
+            <div className="absolute left-[43px] sm:left-[56px] lg:left-[64px] top-6 sm:top-8 lg:top-10 w-px bg-[#4A5B2D]" 
+                 style={{ height: `calc(100% - 3rem)` }}></div>
             
             {itineraryData.map((day) => (
-              <div key={day.day} className="relative flex mb-6 sm:mb-8">
+              <div key={day.day} className="relative flex mb-4 sm:mb-6">
                 {/* Day indicator positioned to the left of the dot */}
-                <div className="flex items-start mr-3 sm:mr-4 md:mr-6">
-                  <div className="text-left mr-2 sm:mr-3 md:mr-4 w-10 sm:w-12 md:w-16 flex flex-col">
+                <div className="flex items-start mr-2 sm:mr-3 lg:mr-4">
+                  <div className="text-left mr-2 sm:mr-3 w-8 sm:w-10 lg:w-12 flex flex-col">
                     <div
-                      className="text-sm sm:text-lg md:text-2xl uppercase font-[family-name:--font-montserrat] font-semibold tracking-wider"
+                      className="text-xs sm:text-sm lg:text-base uppercase font-[family-name:--font-montserrat] font-semibold tracking-wider"
                       style={{ color: '#4A5B2D99' }}
                     >
                       DAY
                     </div>
                     <div
-                      className="text-3xl sm:text-4xl md:text-6xl font-[family-name:--font-montserrat] leading-none font-extrabold"
+                      className="text-2xl sm:text-3xl lg:text-4xl font-[family-name:--font-montserrat] leading-none font-extrabold"
                       style={{ color: '#4A5B2D', fontWeight: 800 }}
                     >
                       {String(day.day).padStart(2, '0')}
@@ -192,7 +192,7 @@ const TourContent = () => {
                   </div>
                   {/* Dot positioned to align with the number */}
                   <div
-                    className="w-2 h-2 sm:w-3 sm:h-3 rounded-full relative z-10 mt-8 sm:mt-10 md:mt-14"
+                    className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full relative z-10 mt-6 sm:mt-7 lg:mt-9"
                     style={{ 
                       backgroundColor: '#4A5B2D'
                     }}
@@ -200,28 +200,28 @@ const TourContent = () => {
                 </div>
 
                 {/* Content */}
-                <div className="flex-1 pb-6 sm:pb-8 pl-2 sm:pl-3 md:pl-4">
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-[#4A5B2DCC] mb-2">{day.title}</h3>
+                <div className="flex-1 pb-4 sm:pb-6 pl-2 sm:pl-3">
+                  <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-[#4A5B2DCC] mb-2">{day.title}</h3>
 
-                  <div className="flex items-center gap-2 mb-3">
-                    <div className="text-sm sm:text-base md:text-lg text-gray-600">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="text-sm sm:text-base text-gray-600">
                       <span className="font-semibold">Mood :</span> {day.description}
                     </div>
                   </div>
 
                   {/* Activities list */}
-                  <div className="space-y-1 sm:space-y-2 mb-4 sm:mb-6">
+                  <div className="space-y-1 mb-3 sm:mb-4">
                     {day.activities.map((activity, i) => (
                       <div key={i} className="flex items-start">
-                        <span className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">{activity}</span>
+                        <span className="text-xs sm:text-sm lg:text-base text-gray-700 leading-relaxed">{activity}</span>
                       </div>
                     ))}
                   </div>
 
                   {/* Images */}
-                  <div className="grid grid-cols-2 gap-2 sm:gap-4 mb-4 sm:mb-6">
+                  <div className="grid grid-cols-2 gap-2 sm:gap-3 mb-3 sm:mb-4">
                     {day.images.map((image, i) => (
-                      <div key={i} className="relative overflow-hidden rounded-lg h-20 sm:h-24 md:h-32">
+                      <div key={i} className="relative overflow-hidden rounded-lg h-16 sm:h-20 lg:h-24">
                         <div
                           className="w-full h-full bg-cover bg-center"
                           style={{ backgroundImage: `url('${image}')` }}
@@ -233,12 +233,12 @@ const TourContent = () => {
                   {/* Places to visit */}
                   {day.places && (
                     <div>
-                      <h4 className="text-base sm:text-lg font-semibold text-[#4A5B2D] mb-2">
+                      <h4 className="text-sm sm:text-base lg:text-lg font-semibold text-[#4A5B2D] mb-2">
                         Places we recommend you to visit
                       </h4>
                       <ul className="space-y-1">
                         {day.places.map((place, i) => (
-                          <li key={i} className="text-sm sm:text-base md:text-lg text-gray-600">• {place}</li>
+                          <li key={i} className="text-xs sm:text-sm lg:text-base text-gray-600">• {place}</li>
                         ))}
                       </ul>
                     </div>
@@ -251,18 +251,18 @@ const TourContent = () => {
       </section>
 
       {/* Things you should know Section */}
-      <section id="things-to-know" className="scroll-mt-44 mt-16 sm:mt-20">
-        <div className="space-y-6 sm:space-y-8">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-[#4A5B2D] mb-8 sm:mb-10 md:mb-12">Things you should know</h2>
+      <section id="things-to-know" className="scroll-mt-44 mt-12 sm:mt-16">
+        <div className="space-y-4 sm:space-y-6">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light text-[#4A5B2D] mb-6 sm:mb-8 lg:mb-10">Things you should know</h2>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
             {/* What is included */}
             <div>
-              <h3 className="text-xl sm:text-2xl font-medium text-gray-800 mb-4 sm:mb-6">What is included in the tour</h3>
-              <ul className="space-y-2 sm:space-y-3">
+              <h3 className="text-lg sm:text-xl font-medium text-gray-800 mb-3 sm:mb-4">What is included in the tour</h3>
+              <ul className="space-y-2">
                 {includedItems.map((item, index) => (
-                  <li key={index} className="flex items-start text-sm sm:text-base md:text-lg text-gray-700">
-                    <span className="text-gray-400 mr-3 mt-1">•</span>
+                  <li key={index} className="flex items-center text-sm sm:text-base text-gray-700">
+                    <span className="text-gray-400 mr-2">•</span>
                     {item}
                   </li>
                 ))}
@@ -271,11 +271,11 @@ const TourContent = () => {
 
             {/* What is NOT included */}
             <div>
-              <h3 className="text-xl sm:text-2xl font-medium text-gray-800 mb-4 sm:mb-6">What is NOT included in the tour</h3>
-              <ul className="space-y-2 sm:space-y-3">
+              <h3 className="text-lg sm:text-xl font-medium text-gray-800 mb-3 sm:mb-4">What is NOT included in the tour</h3>
+              <ul className="space-y-2">
                 {notIncludedItems.map((item, index) => (
-                  <li key={index} className="flex items-start text-sm sm:text-base md:text-lg text-gray-700">
-                    <span className="text-gray-400 mr-3 mt-1">•</span>
+                  <li key={index} className="flex items-center text-sm sm:text-base text-gray-700">
+                    <span className="text-gray-400 mr-2">•</span>
                     {item}
                   </li>
                 ))}

@@ -68,7 +68,7 @@ const TourTabs = ({ onTabChange = () => {} }: TourTabsProps) => {
         <button
           key={tab.id}
           onClick={() => scrollToSection(tab.id)}
-          className={`pb-3 sm:py-4 pr-4 sm:pr-6 md:pr-8 mr-4 sm:mr-6 md:mr-8 transition-colors text-lg sm:text-xl md:text-2xl font-medium whitespace-nowrap ${
+          className={`py-2 sm:py-3 pr-3 sm:pr-4 lg:pr-6 mr-3 sm:mr-4 lg:mr-6 transition-colors text-base sm:text-lg lg:text-xl font-medium whitespace-nowrap ${
             activeSection === tab.id
               ? 'border-b-2 border-[#4A5B2D] text-[#4A5B2D] font-medium'
               : 'text-black hover:text-[#4A5B2D]'

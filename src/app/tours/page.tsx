@@ -1,12 +1,12 @@
-import Breadcrumb from '@/components/Breadcrumb';
-import TourHeader from '@/components/TourHeader';
-import TourGallery from '@/components/TourGallery';
-import TourTabs from '@/components/TourTabs';
-import TourContent from '@/components/TourContent';
-import TourPricing from '@/components/TourPricing';
-import TripVibeCheck from '@/components/TripVibeCheck';
-import ThingsToCarry from '@/components/ThingsToCarry';
-import LiveTripSection from '@/components/LiveTripSection';
+import Breadcrumb from '@/components/Tours/Breadcrumb';
+import TourHeader from '@/components/Tours/TourHeader';
+import TourGallery from '@/components/Tours/TourGallery';
+import TourTabs from '@/components/Tours/TourTabs';
+import TourContent from '@/components/Tours/TourContent';
+import TourPricing from '@/components/Tours/TourPricing';
+import TripVibeCheck from '@/components/Tours/TripVibeCheck';
+import ThingsToCarry from '@/components/Tours/ThingsToCarry';
+import LiveTripSection from '@/components/Tours/LiveTripSection';
 
 export default function HimalayanRetreatPage() {
   // Example breadcrumb items
@@ -69,7 +69,7 @@ export default function HimalayanRetreatPage() {
 
   return (
     <div className="bg-white">
-      <div className="pb-8 sm:pb-12 md:pb-16 container mx-auto px-3 sm:px-4 md:px-6">
+      <div className="pb-6 sm:pb-8 lg:pb-12 container mx-auto px-3 sm:px-4 lg:px-6 max-w-7xl">
         <Breadcrumb items={breadcrumbItems} />
         
         <TourHeader 
@@ -80,12 +80,12 @@ export default function HimalayanRetreatPage() {
         <TourGallery images={tourImages} />
         
         {/* Tour Details Section */}
-        <div className="mt-8 sm:mt-12 md:mt-16">
-          <div className="grid grid-cols-1 lg:grid-cols-[2fr_1px_1fr] gap-8 sm:gap-12 md:gap-16">
+        <div className="mt-6 sm:mt-8 lg:mt-12">
+          <div className="grid grid-cols-1 lg:grid-cols-[2fr_1px_1fr] gap-6 sm:gap-8 lg:gap-12">
             {/* Main Content */}
-            <div className="lg:pr-8">
+            <div className="lg:pr-6">
               {/* Sticky Tour Tabs */}
-              <div className="lg:sticky lg:top-21 lg:z-20 bg-white">
+              <div className="lg:sticky lg:top-16 lg:z-20 bg-white">
                 <TourTabs />
               </div>
               <TourContent />
@@ -95,9 +95,9 @@ export default function HimalayanRetreatPage() {
             <div className="hidden lg:block w-px bg-[#000000B2] sticky top-24 h-96"></div>
             
             {/* Sidebar */}
-            <div className="lg:pl-8 lg:pt-4">
+            <div className="lg:pl-6 lg:pt-3">
               {/* Sticky Sidebar */}
-              <div className="lg:sticky lg:top-24 lg:h-100vh lg:overflow-y-auto space-y-6 sm:space-y-8">
+              <div className="lg:sticky lg:top-19 lg:max-h-screen lg:overflow-y-auto scrollbar-hide space-y-3 sm:space-y-4">
                 <TourPricing />
                 <TripVibeCheck />
                 <ThingsToCarry />

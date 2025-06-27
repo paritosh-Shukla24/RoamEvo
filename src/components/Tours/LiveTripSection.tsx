@@ -15,17 +15,17 @@ const LiveTripSection = () => {
   ];
 
   return (
-    <section className="pb-12 sm:pt-8 sm:pb-16 md:pt-10 md:pb-20 bg-white">
-      <div className="container mx-auto px-3 sm:px-4 md:px-6">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-center text-[#4A5B2D] mb-8 sm:mb-12 md:mb-16">
+    <section className="pb-8 sm:pt-6 sm:pb-12 lg:pt-8 lg:pb-16 bg-white">
+      <div className="container mx-auto px-3 sm:px-4 lg:px-6">
+        <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-light text-center text-[#4A5B2D] mb-6 sm:mb-8 lg:mb-12">
           See our people live on the trip !
         </h2>
         
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3 lg:gap-6 max-w-5xl mx-auto">
           {tripImages.map((image, index) => (
             <div 
               key={index}
-              className="relative aspect-[4/5] sm:aspect-[4/5] md:aspect-[4/5] rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="relative aspect-[4/5] rounded-lg sm:rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
             >
               <div
                 className="w-full h-full bg-cover bg-center"
