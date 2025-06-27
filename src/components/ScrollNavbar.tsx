@@ -3,7 +3,11 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
-const ScrollNavbar = () => {
+interface ScrollNavbarProps {
+  startDark?: boolean; // For pages without hero backgrounds
+}
+
+const ScrollNavbar = ({ startDark = false }: ScrollNavbarProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -16,17 +20,28 @@ const ScrollNavbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navbarClasses = `
+  // For pages with hero backgrounds (home, about-us)
+  const heroNavbarClasses = `
     sticky top-0 w-full z-50 transition-all duration-300 ease-in-out
     flex items-center justify-between px-4 sm:px-6 md:px-12 py-4 sm:py-6 text-lg sm:text-xl
+    border-b
     ${isScrolled 
-      ? 'bg-white shadow-md text-black' 
-      : 'bg-transparent text-white'
+      ? 'bg-white text-black border-gray-200' 
+      : 'bg-transparent text-white border-transparent'
     }
   `;
 
-  const textColor = isScrolled ? 'text-black' : 'text-white';
-  const hoverColor = isScrolled ? 'hover:text-gray-600' : 'hover:text-gray-300';
+  // For pages without hero backgrounds (tours, etc.)
+  const standardNavbarClasses = `
+    sticky top-0 w-full z-50 transition-all duration-300 ease-in-out
+    flex items-center justify-between px-4 sm:px-6 md:px-12 py-4 sm:py-6 text-lg sm:text-xl
+    bg-white text-black border-b
+    ${isScrolled ? 'border-gray-200' : 'border-transparent'}
+  `;
+
+  const navbarClasses = startDark ? standardNavbarClasses : heroNavbarClasses;
+  const textColor = startDark ? 'text-black' : (isScrolled ? 'text-black' : 'text-white');
+  const hoverColor = startDark ? 'hover:text-gray-600' : (isScrolled ? 'hover:text-gray-600' : 'hover:text-gray-300');
 
   return (
     <nav className={navbarClasses}>

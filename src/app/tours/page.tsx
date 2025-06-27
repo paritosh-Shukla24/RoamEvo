@@ -1,5 +1,3 @@
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import TourHeader from '@/components/TourHeader';
 import TourGallery from '@/components/TourGallery';
@@ -8,6 +6,7 @@ import TourContent from '@/components/TourContent';
 import TourPricing from '@/components/TourPricing';
 import TripVibeCheck from '@/components/TripVibeCheck';
 import ThingsToCarry from '@/components/ThingsToCarry';
+import LiveTripSection from '@/components/LiveTripSection';
 
 export default function HimalayanRetreatPage() {
   // Example breadcrumb items
@@ -69,50 +68,47 @@ export default function HimalayanRetreatPage() {
   ];
 
   return (
-    <>
-      <div className="min-h-screen bg-white">
-        <Navbar variant="light" />
+    <div className="bg-white">
+      <div className="pb-8 sm:pb-12 md:pb-16 container mx-auto px-3 sm:px-4 md:px-6">
+        <Breadcrumb items={breadcrumbItems} />
         
-        <main className="pb-8 sm:pb-12 md:pb-16 container mx-auto px-3 sm:px-4 md:px-6">
-          <Breadcrumb items={breadcrumbItems} />
-          
-          <TourHeader 
-            title="Himalayan Adventure Retreat" 
-            emoji="🏔️"
-          />
-          
-          <TourGallery images={tourImages} />
-          
-          {/* Tour Details Section */}
-          <div className="mt-8 sm:mt-12 md:mt-16">
-            <div className="grid grid-cols-1 lg:grid-cols-[2fr_1px_1fr] gap-8 sm:gap-12 md:gap-16">
-              {/* Main Content */}
-              <div className="lg:pr-8">
-                {/* Sticky Tour Tabs */}
-                <div className="lg:sticky lg:top-20 lg:z-20 bg-white">
-                  <TourTabs />
-                </div>
-                <TourContent />
+        <TourHeader 
+          title="Himalayan Adventure Retreat" 
+          emoji="🏔️"
+        />
+        
+        <TourGallery images={tourImages} />
+        
+        {/* Tour Details Section */}
+        <div className="mt-8 sm:mt-12 md:mt-16">
+          <div className="grid grid-cols-1 lg:grid-cols-[2fr_1px_1fr] gap-8 sm:gap-12 md:gap-16">
+            {/* Main Content */}
+            <div className="lg:pr-8">
+              {/* Sticky Tour Tabs */}
+              <div className="lg:sticky lg:top-21 lg:z-20 bg-white">
+                <TourTabs />
               </div>
-              
-              {/* Vertical Separator Line */}
-              <div className="hidden lg:block w-px bg-[#000000B2] sticky top-24 h-96"></div>
-              
-              {/* Sidebar */}
-              <div className="lg:pl-8">
-                {/* Sticky Sidebar */}
-                <div className="lg:sticky lg:top-24 lg:h-100vh lg:overflow-y-auto space-y-6 sm:space-y-8">
-                  <TourPricing />
-                  <TripVibeCheck />
-                  <ThingsToCarry />
-                </div>
+              <TourContent />
+            </div>
+            
+            {/* Vertical Separator Line */}
+            <div className="hidden lg:block w-px bg-[#000000B2] sticky top-24 h-96"></div>
+            
+            {/* Sidebar */}
+            <div className="lg:pl-8 lg:pt-4">
+              {/* Sticky Sidebar */}
+              <div className="lg:sticky lg:top-24 lg:h-100vh lg:overflow-y-auto space-y-6 sm:space-y-8">
+                <TourPricing />
+                <TripVibeCheck />
+                <ThingsToCarry />
               </div>
             </div>
           </div>
-        </main>
+        </div>
       </div>
       
-      <Footer />
-    </>
+      {/* Live Trip Section */}
+      <LiveTripSection />
+    </div>
   );
 }
