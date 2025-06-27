@@ -9,6 +9,7 @@ interface TourTabsProps {
 
 const TourTabs = ({ activeTab, onTabChange }: TourTabsProps) => {
   const [activeSection, setActiveSection] = useState('overview');
+  const [isScrolling, setIsScrolling] = useState(false);
 
   const tabs = [
     { id: 'overview', label: 'Overview' },
@@ -18,14 +19,16 @@ const TourTabs = ({ activeTab, onTabChange }: TourTabsProps) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['overview', 'itinerary'];
+      if (isScrolling) return; // Don't update active section while programmatically scrolling
+      
+      const sections = ['overview', 'itinerary', 'things-to-know'];
       let current = 'overview';
 
       for (const sectionId of sections) {
         const element = document.getElementById(sectionId);
         if (element) {
           const rect = element.getBoundingClientRect();
-          if (rect.top <= 200) {
+          if (rect.top <= 250) { // Increased threshold for better detection
             current = sectionId;
           }
         }
@@ -38,21 +41,30 @@ const TourTabs = ({ activeTab, onTabChange }: TourTabsProps) => {
     handleScroll(); // Check initial position
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isScrolling]);
 
   const scrollToSection = (sectionId: string) => {
+    setIsScrolling(true);
+    setActiveSection(sectionId); // Immediately set the target section as active
+    
     const element = document.getElementById(sectionId);
     if (element) {
-      const offsetTop = element.offsetTop - 120; // Account for navbar height
+      const offsetTop = element.offsetTop - 180; // Account for sticky navbar + sticky tabs height
       window.scrollTo({
         top: offsetTop,
         behavior: 'smooth'
       });
     }
+    
     onTabChange(sectionId);
+    
+    // Re-enable scroll detection after scrolling is complete
+    setTimeout(() => {
+      setIsScrolling(false);
+    }, 800); // Slightly longer than scroll animation
   };
   return (
-    <div className="flex border-b border-gray-200 mb-6 sm:mb-8 overflow-x-auto">
+    <div className="flex border-b border-gray-200 overflow-x-auto">
       {tabs.map((tab) => (
         <button
           key={tab.id}
@@ -60,7 +72,7 @@ const TourTabs = ({ activeTab, onTabChange }: TourTabsProps) => {
           className={`pb-3 sm:pb-4 pr-4 sm:pr-6 md:pr-8 mr-4 sm:mr-6 md:mr-8 transition-colors text-lg sm:text-xl md:text-2xl font-medium whitespace-nowrap ${
             activeSection === tab.id
               ? 'border-b-2 border-[#4A5B2D] text-[#4A5B2D] font-medium'
-              : 'text-[#000000B2] hover:text-gray-700'
+              : 'text-black hover:text-[#4A5B2D]'
           }`}
         >
           {tab.label}

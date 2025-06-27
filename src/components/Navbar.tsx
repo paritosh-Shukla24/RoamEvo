@@ -8,7 +8,7 @@ const Navbar = ({ variant = 'dark' }: NavbarProps) => {
   const textColor = variant === 'light' ? 'text-[#000000B2]' : 'text-white';
   const hoverColor = variant === 'light' ? 'hover:text-black' : 'hover:text-gray-300';
   return (
-    <nav className="absolute top-0 w-full z-10 flex items-center justify-between px-4 sm:px-6 md:px-12 py-4 sm:py-6 text-lg sm:text-xl">
+    <nav className="sticky top-0 w-full z-50 bg-white border-transparent flex items-center justify-between px-4 sm:px-6 md:px-12 py-4 sm:py-6 text-lg sm:text-xl">
       <div className="logo">
         <Link href="/" className={`${textColor} text-2xl sm:text-3xl font-light transition`}>
           RoamEvo

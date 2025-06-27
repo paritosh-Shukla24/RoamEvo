@@ -45,7 +45,8 @@ export default function HimalayanRetreatPage() {
     <>
       <div className="min-h-screen bg-white">
         <Navbar variant="light" />
-          <main className="pt-16 sm:pt-20 md:pt-24 pb-8 sm:pb-12 md:pb-16 container mx-auto px-3 sm:px-4 md:px-6">
+        
+        <main className="pb-8 sm:pb-12 md:pb-16 container mx-auto px-3 sm:px-4 md:px-6">
           <Breadcrumb items={breadcrumbItems} />
           
           <TourHeader 
@@ -59,14 +60,20 @@ export default function HimalayanRetreatPage() {
           <div className="mt-8 sm:mt-12 md:mt-16 grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
             {/* Main Content */}
             <div className="lg:col-span-2">
-              <TourTabs activeTab={activeTab} onTabChange={setActiveTab} />
+              {/* Sticky Tour Tabs */}
+              <div className="lg:sticky lg:top-20 lg:z-20 bg-white">
+                <TourTabs activeTab={activeTab} onTabChange={setActiveTab} />
+              </div>
               <TourContent activeTab={activeTab} />
             </div>
               {/* Sidebar */}
-            <div className="lg:col-span-1 space-y-6 sm:space-y-8">
-              <TourPricing />
-              <TripVibeCheck />
-              <ThingsToCarry />
+            <div className="lg:col-span-1">
+              {/* Sticky Sidebar */}
+              <div className="lg:sticky lg:top-24 lg:h-100vh lg:overflow-y-auto space-y-6 sm:space-y-8">
+                <TourPricing />
+                <TripVibeCheck />
+                <ThingsToCarry />
+              </div>
             </div>
           </div>
         </main>

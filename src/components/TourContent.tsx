@@ -115,11 +115,31 @@ const itineraryData: ItineraryDay[] = [
   }
 ];
 
+// Things to know data
+const includedItems = [
+  'Pickup & drop (Dehradun to Camp)',
+  'All accommodations (3 nights in alpine tents)',
+  'All meals (Day 1 lunch to Day 4 breakfast)',
+  'Rafting with safety gear',
+  'Certified guides and trek leaders',
+  'Bonfire night, music, and games',
+  'Local cultural tour',
+  'Entry fees, forest permits'
+];
+
+const notIncludedItems = [
+  'Meals during travel',
+  'Personal expenses (snacks, souvenirs)',
+  'Medical/Travel insurance',
+  'Extra adventure activities (on request)',
+  'Tips and optional donations'
+];
+
 const TourContent = ({ activeTab }: TourContentProps) => {
   return (
     <div className="flex-1 space-y-8 sm:space-y-12 md:space-y-16">
       {/* Overview Section */}
-      <section id="overview" className="scroll-mt-20 sm:scroll-mt-24 text-base sm:text-lg md:text-xl">
+      <section id="overview" className="scroll-mt-44 text-base sm:text-lg md:text-xl sm:mt-6">
         <div className="space-y-4 sm:space-y-6 text-[#000000] leading-relaxed text-justify">
           <p>
             The Himalayan Adventure Retreat is more than just a trip — it&apos;s a soul-
@@ -148,13 +168,13 @@ const TourContent = ({ activeTab }: TourContentProps) => {
       </section>
 
       {/* Itinerary Section */}
-      <section id="itinerary" className="scroll-mt-20 sm:scroll-mt-24">
+      <section id="itinerary" className="scroll-mt-44">
         <div className="space-y-6 sm:space-y-8">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-[#4A5B2D] mb-8 sm:mb-10 md:mb-12">Itinerary</h2>
           <div className="relative">
             {/* Continuous timeline line - starts from below first dot and goes through all days */}
             <div className="absolute left-[51.5px] sm:left-[65px] md:left-[85px] top-8 sm:top-12 md:top-15 w-px bg-[#4A5B2D]" 
-                 style={{ height: `calc(100% - 2rem)` }}></div>
+                 style={{ height: `calc(100% - 3.6rem)` }}></div>
             
             {itineraryData.map((day, index) => (
               <div key={day.day} className="relative flex mb-6 sm:mb-8">
@@ -230,6 +250,41 @@ const TourContent = ({ activeTab }: TourContentProps) => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Things you should know Section */}
+      <section id="things-to-know" className="scroll-mt-44 mt-16 sm:mt-20">
+        <div className="space-y-6 sm:space-y-8">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-[#4A5B2D] mb-8 sm:mb-10 md:mb-12">Things you should know</h2>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
+            {/* What is included */}
+            <div>
+              <h3 className="text-xl sm:text-2xl font-medium text-gray-800 mb-4 sm:mb-6">What is included in the tour</h3>
+              <ul className="space-y-2 sm:space-y-3">
+                {includedItems.map((item, index) => (
+                  <li key={index} className="flex items-start text-sm sm:text-base md:text-lg text-gray-700">
+                    <span className="text-gray-400 mr-3 mt-1">•</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* What is NOT included */}
+            <div>
+              <h3 className="text-xl sm:text-2xl font-medium text-gray-800 mb-4 sm:mb-6">What is NOT included in the tour</h3>
+              <ul className="space-y-2 sm:space-y-3">
+                {notIncludedItems.map((item, index) => (
+                  <li key={index} className="flex items-start text-sm sm:text-base md:text-lg text-gray-700">
+                    <span className="text-gray-400 mr-3 mt-1">•</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
