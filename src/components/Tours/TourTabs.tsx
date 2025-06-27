@@ -48,7 +48,7 @@ const TourTabs = ({ onTabChange = () => {} }: TourTabsProps) => {
     
     const element = document.getElementById(sectionId);
     if (element) {
-      const offsetTop = element.offsetTop - 180; // Account for sticky navbar + sticky tabs height
+      const offsetTop = element.offsetTop - 140; // Account for sticky navbar + sticky tabs height
       window.scrollTo({
         top: offsetTop,
         behavior: 'smooth'
@@ -68,9 +68,9 @@ const TourTabs = ({ onTabChange = () => {} }: TourTabsProps) => {
         <button
           key={tab.id}
           onClick={() => scrollToSection(tab.id)}
-          className={`py-2 sm:py-3 pr-3 sm:pr-4 lg:pr-6 mr-3 sm:mr-4 lg:mr-6 transition-colors text-base sm:text-lg lg:text-xl font-medium whitespace-nowrap ${
+          className={`py-2 sm:py-3 2xl:py-4 pr-3 sm:pr-4 lg:pr-6 2xl:pr-8 mr-3 sm:mr-4 lg:mr-6 2xl:mr-8 transition-colors text-base sm:text-lg lg:text-xl 2xl:text-2xl font-medium whitespace-nowrap ${
             activeSection === tab.id
-              ? 'border-b-2 border-[#4A5B2D] text-[#4A5B2D] font-medium'
+              ? 'border-b-2 2xl:border-b-3 border-[#4A5B2D] text-[#4A5B2D] font-medium'
               : 'text-black hover:text-[#4A5B2D]'
           }`}
         >

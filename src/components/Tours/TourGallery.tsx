@@ -66,12 +66,12 @@ const TourGallery = ({ images }: TourGalleryProps) => {
 
   return (
     <>
-      <div className="mb-4 sm:mb-6 lg:mb-8">
+      <div className="mb-4 sm:mb-6 lg:mb-8 2xl:mb-12">
         {/* Desktop Layout */}
-        <div className="hidden lg:grid lg:grid-cols-2 gap-3 xl:gap-4">
+        <div className="hidden lg:grid lg:grid-cols-2 gap-3 xl:gap-4 2xl:gap-6">
           {/* Main large image */}
           <div 
-            className="relative rounded-lg overflow-hidden h-[350px] xl:h-[400px] cursor-pointer group"
+            className="relative rounded-lg 2xl:rounded-xl overflow-hidden h-[350px] xl:h-[400px] 2xl:h-[500px] cursor-pointer group"
             onClick={() => handleImageClick(0)}
           >
             <Image
@@ -83,20 +83,20 @@ const TourGallery = ({ images }: TourGalleryProps) => {
               priority
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent flex items-center justify-center">
-              <div className="text-white text-4xl xl:text-5xl font-bold tracking-wider text-center">
+              <div className="text-white text-4xl xl:text-5xl 2xl:text-6xl font-bold tracking-wider text-center">
                 <div>BYASI</div>
-                <div className="text-right -mt-1 xl:-mt-2">RISH</div>
+                <div className="text-right -mt-1 xl:-mt-2 2xl:-mt-3">RISH</div>
               </div>
             </div>
           </div>
 
           {/* Right side - smaller images */}
           <div className="relative">
-            <div className="grid grid-rows-3 gap-3 xl:gap-4 h-[350px] xl:h-[400px]">
+            <div className="grid grid-rows-3 gap-3 xl:gap-4 2xl:gap-6 h-[350px] xl:h-[400px] 2xl:h-[500px]">
               {images.slice(1, 4).map((image, index) => (
                 <div 
                   key={index + 1} 
-                  className="relative rounded-lg overflow-hidden cursor-pointer group"
+                  className="relative rounded-lg 2xl:rounded-xl overflow-hidden cursor-pointer group"
                   onClick={() => handleImageClick(index + 1)}
                 >
                   <Image
@@ -117,9 +117,9 @@ const TourGallery = ({ images }: TourGalleryProps) => {
                 setSelectedImageIndex(0);
                 handleImageClick(0);
               }}
-              className="absolute bottom-3 right-3 bg-white/90 hover:bg-white text-gray-800 px-3 py-2 rounded-lg shadow-lg transition-all duration-200 flex items-center gap-2 text-sm"
+              className="absolute bottom-3 2xl:bottom-4 right-3 2xl:right-4 bg-white/90 hover:bg-white text-gray-800 px-3 2xl:px-4 py-2 2xl:py-3 rounded-lg 2xl:rounded-xl shadow-lg transition-all duration-200 flex items-center gap-2 text-sm 2xl:text-base"
             >
-              <PhotoIcon className="w-4 h-4" />
+              <PhotoIcon className="w-4 h-4 2xl:w-5 2xl:h-5" />
               View All ({images.length})
             </button>
           </div>

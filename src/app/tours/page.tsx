@@ -69,7 +69,7 @@ export default function HimalayanRetreatPage() {
 
   return (
     <div className="bg-white">
-      <div className="pb-6 sm:pb-8 lg:pb-12 container mx-auto px-3 sm:px-4 lg:px-6 max-w-7xl">
+      <div className="pb-6 sm:pb-8 lg:pb-12 2xl:pb-16 container mx-auto px-3 sm:px-4 lg:px-6 2xl:px-8 max-w-7xl 2xl:max-w-[1600px]">
         <Breadcrumb items={breadcrumbItems} />
         
         <TourHeader 
@@ -80,24 +80,24 @@ export default function HimalayanRetreatPage() {
         <TourGallery images={tourImages} />
         
         {/* Tour Details Section */}
-        <div className="mt-6 sm:mt-8 lg:mt-12">
-          <div className="grid grid-cols-1 lg:grid-cols-[2fr_1px_1fr] gap-6 sm:gap-8 lg:gap-12">
+        <div className="mt-6 sm:mt-8 lg:mt-12 2xl:mt-16">
+          <div className="grid grid-cols-1 lg:grid-cols-[2fr_1px_1fr] 2xl:grid-cols-[2.5fr_1px_1fr] gap-6 sm:gap-8 lg:gap-12 2xl:gap-16">
             {/* Main Content */}
-            <div className="lg:pr-6">
+            <div className="lg:pr-6 2xl:pr-8">
               {/* Sticky Tour Tabs */}
-              <div className="lg:sticky lg:top-16 lg:z-20 bg-white">
+              <div className="lg:sticky lg:top-16 2xl:top-20 lg:z-20 bg-white">
                 <TourTabs />
               </div>
               <TourContent />
             </div>
             
             {/* Vertical Separator Line */}
-            <div className="hidden lg:block w-px bg-[#000000B2] sticky top-24 h-96"></div>
+            <div className="hidden lg:block w-px bg-[#000000B2] sticky top-24 2xl:top-28 h-96 2xl:h-[500px]"></div>
             
             {/* Sidebar */}
-            <div className="lg:pl-6 lg:pt-3">
+            <div className="lg:pl-6 2xl:pl-8 lg:pt-3 2xl:pt-4">
               {/* Sticky Sidebar */}
-              <div className="lg:sticky lg:top-19 lg:max-h-screen lg:overflow-y-auto scrollbar-hide space-y-3 sm:space-y-4">
+              <div className="lg:sticky lg:top-19 2xl:top-24 lg:max-h-screen 2xl:max-h-[calc(100vh-6rem)] lg:overflow-y-auto scrollbar-hide space-y-3 sm:space-y-4 2xl:space-y-6">
                 <TourPricing />
                 <TripVibeCheck />
                 <ThingsToCarry />
