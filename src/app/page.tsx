@@ -1,21 +1,26 @@
+'use client';
+
+import { useState } from 'react';
 import HeroSection from "@/components/HeroSection";
+import HeroSlideshow from "@/components/Slideshow";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import TopSellingTours from "@/components/TopSellingTours";
 import DreamDestinations from "@/components/DreamDestinations";
 
 export default function Home() {
+  const [currentLocation, setCurrentLocation] = useState("Mountain Adventures");
+
+  const handleSlideChange = (title: string) => {
+    setCurrentLocation(title);
+  };
+
   return (
     <div className="relative">
       <div className="relative w-full h-screen">
-        {/* Background Image */}
-        <div
-          className="absolute inset-0 z-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/hero-background.png')",
-          }}
-        />
+        {/* Background Slideshow */}
+        <HeroSlideshow onSlideChange={handleSlideChange} />
 
-        <HeroSection />
+        <HeroSection currentLocation={currentLocation} />
       </div>
 
       {/* Why Choose Us Section */}

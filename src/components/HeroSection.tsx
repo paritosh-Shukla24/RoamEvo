@@ -2,7 +2,11 @@ import SearchBar from './SearchBar';
 import LocationPin from './LocationPin';
 import SocialLinks from './SocialLinks';
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  currentLocation?: string;
+}
+
+const HeroSection = ({ currentLocation = "Mountain Adventures" }: HeroSectionProps) => {
   return (
     <div className="relative h-screen w-full flex flex-col justify-center items-center">
       <div className="text-center z-10 px-4 md:px-0">
@@ -19,7 +23,7 @@ const HeroSection = () => {
       </div>
       
       <div className="absolute bottom-8 w-full px-6 md:px-12 flex flex-col md:flex-row justify-between items-center z-10">
-        <LocationPin location="Solang Valley, Kashmir" />
+        <LocationPin location={currentLocation} />
         <SocialLinks />
       </div>
       
