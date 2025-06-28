@@ -201,7 +201,7 @@ export default function Footer() {
               {/* Copyright */}
               <div className="flex items-end md:justify-end">
                 <p className="text-gray-600 mt-8 md:mt-0">
-                  © RoamEvo Pvt. Ltd., All rights reserved.
+                  © Roamevo, All rights reserved.
                 </p>
               </div>
             </div>

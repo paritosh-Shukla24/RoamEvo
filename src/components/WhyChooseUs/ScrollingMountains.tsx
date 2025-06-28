@@ -43,6 +43,7 @@ const ScrollingMountains = () => {
         {...props}
         ref={ref}
         priority
+        alt='Himalaya Mountains'
         draggable={false}
         className={
           "absolute left-0 bottom-0 w-full h-auto object-cover transition-transform duration-300 ease-out will-change-transform " +

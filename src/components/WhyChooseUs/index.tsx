@@ -5,7 +5,7 @@ import Stat from './Stat';
 import ScrollingMountains from './ScrollingMountains';
 
 const WhyChooseUs = forwardRef<HTMLElement>((props, ref) => (
-  <section ref={ref} className="relative bg-white py-20 pb-60 px-6 overflow-hidden">
+  <section ref={ref} className="relative bg-white py-20 pb-60 px-6 overflow-hidden" id='why-choose-us'>
     <div className="max-w-7xl mx-auto">
       <div className="text-center md:text-left mb-16">
         <h2 className="text-4xl md:text-5xl font-medium text-[#1d2952] mb-4">

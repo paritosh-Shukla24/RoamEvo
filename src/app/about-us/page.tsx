@@ -17,7 +17,7 @@ export default function AboutUsPage() {
 
         <div className="relative z-10 w-full max-w-none" style={{ width: '80%' }}>
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif mb-8 leading-tight">
-            Welcome to RoamEvo &apos;—&apos;<br />
+            Welcome to Roamevo &apos;—&apos;<br />
             Where Adventure Meets Soul
           </h1>
           
