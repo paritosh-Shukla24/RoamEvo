@@ -22,7 +22,7 @@ const HeroSection = ({ currentLocation = "Mountain Adventures" }: HeroSectionPro
         </div>
       </div>
       
-      <div className="absolute bottom-8 w-full px-6 md:px-12 flex flex-col md:flex-row justify-between items-center z-10">
+      <div className="absolute bottom-8 w-full px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-4 z-10">
         <LocationPin location={currentLocation} />
         <SocialLinks />
       </div>

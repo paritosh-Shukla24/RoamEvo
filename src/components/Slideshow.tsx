@@ -98,7 +98,7 @@ const HeroSlideshow = ({ onSlideChange }: HeroSlideshowProps) => {
       
       {/* Optional: Slide indicators (dots) - can be enabled/disabled from CMS */}
       {activeImages.length > 1 && (
-        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+        <div className="absolute bottom-32 md:bottom-20 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
           {activeImages.map((_, index) => (
             <button
               key={index}

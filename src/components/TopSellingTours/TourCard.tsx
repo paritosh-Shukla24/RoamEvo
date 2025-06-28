@@ -79,9 +79,12 @@ const TourCardComponent = ({ destination, rating, reviews, title, imageSrc, pric
         </div>
         
         {/* Button */}
-        <button className="w-full py-3.5 bg-[#1d2952] text-white rounded-md text-center hover:bg-opacity-90 transition mt-4">
+        <a
+          href="tel:+919665398773"
+          className="block w-full py-3.5 bg-[#1d2952] text-white rounded-md text-center hover:bg-opacity-90 transition mt-4"
+        >
           Request a callback
-        </button>
+        </a>
       </div>
     </div>
   );

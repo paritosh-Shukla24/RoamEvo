@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useState, useRef } from "react";
 import HeroSection from "@/components/HeroSection";
 import HeroSlideshow from "@/components/Slideshow";
 import WhyChooseUs from "@/components/WhyChooseUs";
@@ -9,6 +9,7 @@ import DreamDestinations from "@/components/DreamDestinations";
 
 export default function Home() {
   const [currentLocation, setCurrentLocation] = useState("Mountain Adventures");
+  const whyChooseUsRef = useRef<HTMLElement>(null);
 
   const handleSlideChange = (title: string) => {
     setCurrentLocation(title);
@@ -23,11 +24,11 @@ export default function Home() {
         <HeroSection currentLocation={currentLocation} />
       </div>
 
-      {/* Why Choose Us Section */}
-      <WhyChooseUs />
-
       {/* Top Selling Tours Section */}
       <TopSellingTours />
+
+      {/* Why Choose Us Section */}
+      <WhyChooseUs ref={whyChooseUsRef} />
 
       {/* Dream Destinations Section */}
       <DreamDestinations />

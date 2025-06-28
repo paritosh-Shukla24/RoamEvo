@@ -1,4 +1,4 @@
-import MeetTheTeam from '@/components/MeetTheTeam';
+// import MeetTheTeam from '@/components/MeetTheTeam';
 import ExperienceStats from '@/components/ExperienceStats';
 
 export default function AboutUsPage() {
@@ -36,7 +36,7 @@ export default function AboutUsPage() {
       </div>
       
       {/* Meet the Team Section */}
-      <MeetTheTeam />
+      {/* <MeetTheTeam /> */}
       
       {/* Experience & Legacy Stats Section */}
       <ExperienceStats />

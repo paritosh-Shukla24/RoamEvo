@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
 interface ScrollNavbarProps {
@@ -23,7 +24,7 @@ const ScrollNavbar = ({ startDark = false }: ScrollNavbarProps) => {
   // For pages with hero backgrounds (home, about-us)
   const heroNavbarClasses = `
     fixed top-0 w-full z-50 transition-all duration-300 ease-in-out
-    flex items-center justify-between px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-base sm:text-lg
+    flex items-center justify-between px-3 sm:px-4 lg:px-6 py-3 text-base sm:text-lg
     border-b
     ${isScrolled 
       ? 'bg-white text-black border-gray-200' 
@@ -34,7 +35,7 @@ const ScrollNavbar = ({ startDark = false }: ScrollNavbarProps) => {
   // For pages without hero backgrounds (tours, etc.)
   const standardNavbarClasses = `
     sticky top-0 w-full z-50 transition-all duration-300 ease-in-out
-    flex items-center justify-between px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-base sm:text-lg
+    flex items-center justify-between px-3 sm:px-4 lg:px-6 py-3 text-base sm:text-lg
     bg-white text-black border-b
     ${isScrolled ? 'border-gray-200' : 'border-transparent'}
   `;
@@ -45,9 +46,16 @@ const ScrollNavbar = ({ startDark = false }: ScrollNavbarProps) => {
 
   return (
     <nav className={navbarClasses}>
-      <div className="logo">
-        <Link href="/" className={`${textColor} text-xl sm:text-2xl font-light transition-colors duration-300`}>
-          RoamEvo
+      <div className="logo flex items-center">
+        <Link href="/" className="block">
+          <Image
+            src="/images/logo.png"
+            alt="RoamEvo Logo"
+            width={160}
+            height={50}
+            priority
+            className="h-12 w-auto object-contain"
+          />
         </Link>
       </div>
       <div className="hidden lg:flex space-x-4 xl:space-x-6">
@@ -63,9 +71,9 @@ const ScrollNavbar = ({ startDark = false }: ScrollNavbarProps) => {
         <Link href="/international-tours" className={`${textColor} ${hoverColor} transition-colors duration-300`}>
           International Tours
         </Link>
-        <Link href="/trekking-camping" className={`${textColor} ${hoverColor} transition-colors duration-300`}>
+        {/* <Link href="/trekking-camping" className={`${textColor} ${hoverColor} transition-colors duration-300`}>
           Trekking & Camping
-        </Link>
+        </Link> */}
       </div>
       <div className="lg:hidden">
         {/* Mobile menu button */}

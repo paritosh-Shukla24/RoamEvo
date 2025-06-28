@@ -17,14 +17,14 @@ const TourCard = ({ destination, rating, reviews, title, imageSrc, price, itiner
   return (
     <div className="flex flex-col rounded-lg overflow-hidden">
       <div className="relative h-52 w-full overflow-hidden">
-        <Image 
-          src={imageSrc} 
-          alt={title} 
+        <Image
+          src={imageSrc}
+          alt={title}
           fill
           className="rounded-lg object-cover"
         />
       </div>
-      
+
       <div className="mt-4 space-y-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
@@ -37,9 +37,9 @@ const TourCard = ({ destination, rating, reviews, title, imageSrc, price, itiner
             <span className="text-gray-500 text-sm">({reviews})</span>
           </div>
         </div>
-        
+
         <h3 className="text-xl text-[#1d2952] font-medium">{title}</h3>
-        
+
         {/* Itinerary Points */}
         <div className="flex items-center space-x-1 py-2">
           {itinerary.map((stop, index) => (
@@ -49,7 +49,7 @@ const TourCard = ({ destination, rating, reviews, title, imageSrc, price, itiner
             </div>
           ))}
         </div>
-        
+
         {/* City Names */}
         <div className="flex justify-between text-sm text-gray-600">
           {itinerary.filter(stop => stop.isStart || stop.isEnd).map((stop, index) => (
@@ -58,17 +58,20 @@ const TourCard = ({ destination, rating, reviews, title, imageSrc, price, itiner
             </div>
           ))}
         </div>
-        
+
         <div className="flex justify-between items-center pt-4">
           <div>
             <span className="text-xl font-bold text-[#1d2952]">₹{price}</span>
             <span className="text-gray-600 ml-1">per person</span>
           </div>
         </div>
-        
-        <button className="w-full py-3 bg-[#1d2952] text-white rounded text-center hover:bg-opacity-90 transition">
+
+        <a
+          href="tel:+919665398773"
+          className="block w-full py-3.5 bg-[#1d2952] text-white rounded-md text-center hover:bg-opacity-90 transition mt-4"
+        >
           Request a callback
-        </button>
+        </a>
       </div>
     </div>
   );
@@ -126,14 +129,14 @@ const TopSellingTours = () => {
           </p>
           <div className="w-full md:w-64 h-px bg-gray-300"></div>
         </div>
-        
+
         <h2 className="text-4xl md:text-5xl font-medium text-[#1d2952] mb-12">
           Our Top Selling Tours
         </h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {tours.map((tour, index) => (
-            <TourCard 
+            <TourCard
               key={index}
               destination={tour.destination}
               rating={tour.rating}

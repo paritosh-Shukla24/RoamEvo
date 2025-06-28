@@ -57,10 +57,10 @@ function StatItem({ end, suffix, title, duration = 2000 }: StatItemProps) {
 
   return (
     <div ref={ref} className="text-left">
-      <div className="text-4xl md:text-6xl lg:text-9xl font-bold text-[#000000B2] mb-2 font-montserrat">
+      <div className="text-3xl md:text-5xl lg:text-8xl font-bold text-[#000000B2] mb-2 font-montserrat">
         {count}{suffix}
       </div>
-      <div className="text-lg md:text-4xl font-bold text-gray-700 mb-1 font-montserrat">
+      <div className="text-lg md:text-3xl font-bold text-gray-700 mb-1 font-montserrat">
         {title}
       </div>
     </div>
@@ -106,7 +106,7 @@ export default function ExperienceStats() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-left mb-20">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#4A5B2D] mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-[#4A5B2D] mb-4">
             Experience & Legacy
           </h2>
         </div>
