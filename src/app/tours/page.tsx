@@ -24,7 +24,7 @@ export default function UttarakhandTourPage() {
       alt: 'Uttarakhand Himalayan peaks - Main tour destination'
     },
     {
-      src: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
+      src: 'https://images.unsplash.com/photo-1547452377-b2ac40e02ed6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hvcHRhfGVufDB8fDB8fHww', 
       alt: 'Sacred Hindu temple in mountains - Uttarakhand spiritual journey'
     },
     {
