@@ -8,62 +8,64 @@ import TripVibeCheck from '@/components/Tours/TripVibeCheck';
 import ThingsToCarry from '@/components/Tours/ThingsToCarry';
 import LiveTripSection from '@/components/Tours/LiveTripSection';
 
-export default function HimalayanRetreatPage() {
-  // Example breadcrumb items
+export default function UttarakhandTourPage() {
+  // Breadcrumb items for Uttarakhand 2025 tour
   const breadcrumbItems = [
-    { label: 'Rishikesh', href: '/destinations/rishikesh' },
-    { label: 'Byasi', href: '/destinations/byasi' },
-    { label: 'Himalayan Foothills', href: '/destinations/himalayan-foothills' },
+    { label: 'Delhi', href: '/destinations/delhi' },
+    { label: 'Joshimath', href: '/destinations/joshimath' },
+    { label: 'Auli', href: '/destinations/auli' },
+    { label: 'Chopta', href: '/destinations/chopta' },
+    { label: 'Uttarakhand', href: '/destinations/uttarakhand' },
   ];
-  // Example tour gallery images
+  // Tour gallery images based on actual Uttarakhand adventure itinerary
   const tourImages = [
     {
       src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', 
-      alt: 'Byasi resort with mountain view'
+      alt: 'Uttarakhand Himalayan peaks - Main tour destination'
     },
     {
-      src: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
-      alt: 'River view in Himalayan foothills'
+      src: 'https://media.istockphoto.com/id/539105384/photo/kedarnath-in-india.webp?a=1&b=1&s=612x612&w=0&k=20&c=Yl1F8IUm07hk1rX0q6LBiGbMYnie4Ormbxhiq4Kg_Ls=', 
+      alt: 'Kedarnath temple in Uttarakhand - Sacred mountain destination'
     },
     {
-      src: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
-      alt: 'Resort swimming pool with mountain view'
+      src: 'https://images.unsplash.com/photo-1718383537411-6f9e727ae0bb?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cml2ZXIlMjByYWZ0aW5nJTIwZ2FuZ2F8ZW58MHx8MHx8fDA%3D', 
+      alt: 'Ganga river rafting adventure - Day 2 thrilling water sports'
     },
     {
-      src: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
-      alt: 'Resort at night'
+      src: 'https://images.unsplash.com/photo-1715230656262-9410dfbead2a?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cml2ZXIlMjByYWZ0aW5nJTIwZ2FuZ2F8ZW58MHx8MHx8fDA%3D', 
+      alt: 'Group river rafting on Ganga - Team adventure experience'
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1633005623496-899fdf60b749?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2FtcGluZyUyMHRlbnRzJTIwcml2ZXJzaWRlfGVufDB8fDB8fHww', 
+      alt: 'Riverside camping with tents - Day 1-2 accommodation by the river'
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1687511741630-18fe16e8ed7e?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHV0dGFyYWtoYW5kJTIwdmlsbGFnZXxlbnwwfHwwfHx8MA%3D%3D', 
+      alt: 'Traditional Uttarakhand village - Day 3 cultural immersion experience'
+    },
+    {
+      src: 'https://plus.unsplash.com/premium_photo-1697729690458-2d64ca777c04?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHV0dGFyYWtoYW5kJTIwdmlsbGFnZXxlbnwwfHwwfHx8MA%3D%3D', 
+      alt: 'Mountain village life in Uttarakhand - Local community interaction'
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1625927759551-029744579e91?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGJvbmZpcmUlMjBjYW1waW5nJTIwSW5kaWF8ZW58MHx8MHx8fDA%3D', 
+      alt: 'Bonfire camping in India - Evening group activities Day 1 & 4'
+    },
+    {
+      src: 'https://plus.unsplash.com/premium_photo-1661810803959-f91f5195138e?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8VXR0cmFraGFuZCUyMG1vdW50YWluJTIwdHJla2tpbmd8ZW58MHx8MHx8fDA%3D', 
+      alt: 'Mountain trekking in Uttarakhand - Day 4 forest exploration'
+    },
+    {
+      src: 'https://plus.unsplash.com/premium_photo-1661913065271-2c265f232373?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHlvZ2ElMjBieSUyMHJpdmVyfGVufDB8fDB8fHww', 
+      alt: 'Yoga by the river - Daily sunrise meditation sessions'
     },
     {
       src: 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
-      alt: 'Ganges river flowing through mountains'
+      alt: 'Ganga river flowing through Byasi - Day 1 riverside camping location'
     },
     {
-      src: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
-      alt: 'Traditional mountain village'
-    },
-    {
-      src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
-      alt: 'Resort dining area with mountain view'
-    },
-    {
-      src: 'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
-      alt: 'Spa and wellness center'
-    },
-    {
-      src: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
-      alt: 'Resort room with balcony view'
-    },
-    {
-      src: 'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
-      alt: 'Mountain sunrise from resort'
-    },
-    {
-      src: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
-      alt: 'Local cultural activities'
-    },
-    {
-      src: 'https://images.unsplash.com/photo-1580654712603-eb43273aff33?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
-      alt: 'Evening campfire by the river'
+      src: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
+      alt: 'Mountain waterfall trek - Day 2 guided hike destination'
     }
   ];
 
@@ -73,7 +75,7 @@ export default function HimalayanRetreatPage() {
         <Breadcrumb items={breadcrumbItems} />
         
         <TourHeader 
-          title="Himalayan Adventure Retreat" 
+          title="Roamevo Uttarakhand 2025" 
           emoji="🏔️"
         />
         

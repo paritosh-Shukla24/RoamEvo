@@ -1,16 +1,16 @@
 const LiveTripSection = () => {
   const tripImages = [
     {
-      src: 'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      alt: 'Happy traveler in winter gear enjoying the mountains'
+      src: 'https://images.unsplash.com/photo-1715230656262-9410dfbead2a?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cml2ZXIlMjByYWZ0aW5nJTIwZ2FuZ2F8ZW58MHx8MHx8fDA%3D',
+      alt: 'Group enjoying river rafting adventure on Ganga'
     },
     {
-      src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      alt: 'Scenic snowy mountain trail with travelers'
+      src: 'https://media.istockphoto.com/id/539105384/photo/kedarnath-in-india.webp?a=1&b=1&s=612x612&w=0&k=20&c=Yl1F8IUm07hk1rX0q6LBiGbMYnie4Ormbxhiq4Kg_Ls=',
+      alt: 'Travelers at scenic Kedarnath mountain destination'
     },
     {
-      src: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      alt: 'Traveler enjoying hot drink with mountain view'
+      src: 'https://images.unsplash.com/photo-1625927759551-029744579e91?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGJvbmZpcmUlMjBjYW1waW5nJTIwSW5kaWF8ZW58MHx8MHx8fDA%3D',
+      alt: 'Group bonfire camping experience with fellow travelers'
     }
   ];
 

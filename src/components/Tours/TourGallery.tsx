@@ -84,8 +84,8 @@ const TourGallery = ({ images }: TourGalleryProps) => {
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent flex items-center justify-center">
               <div className="text-white text-4xl xl:text-5xl 2xl:text-6xl font-bold tracking-wider text-center">
-                <div>BYASI</div>
-                <div className="text-right -mt-1 xl:-mt-2 2xl:-mt-3">RISH</div>
+                <div>UTTARAKHAND</div>
+                <div className="text-right -mt-1 xl:-mt-2 2xl:-mt-3 text-2xl xl:text-3xl 2xl:text-4xl">2025</div>
               </div>
             </div>
           </div>
@@ -142,8 +142,8 @@ const TourGallery = ({ images }: TourGalleryProps) => {
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent flex items-center justify-center">
               <div className="text-white text-2xl sm:text-3xl md:text-4xl font-bold tracking-wider text-center">
-                <div>BYASI</div>
-                <div className="text-right -mt-1">RISH</div>
+                <div>UTTARAKHAND</div>
+                <div className="text-right -mt-1 text-lg sm:text-xl md:text-2xl">2025</div>
               </div>
             </div>
           </div>

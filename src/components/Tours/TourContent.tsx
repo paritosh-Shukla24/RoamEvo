@@ -11,124 +11,128 @@ interface ItineraryDay {
 const itineraryData: ItineraryDay[] = [
   {
     day: 1,
-    title: 'Arrival & Campfire by the Riverside - Byasi Riverside',
-    description: 'Settle in, breathe deep, and let the world fade away. This day is about grounding yourself in nature\'s calm and preparing for the journey ahead.',
-    mood: 'Chill',
+    title: 'Delhi to Joshimath - Journey to the Himalayas',
+    description: 'Transition from city chaos to Himalayan calm. Start your journey from Delhi, passing through sacred confluences and following the Alaknanda River upstream.',
+    mood: 'Transition',
     activities: [
-      '🚌 Pickup from Dehradun ISBT (9 AM)',
-      '🏔️ Scenic drive through foothills to our riverside base camp (approx. 3 hrs)',
-      '🥤 Welcome drink & orientation by the river',
-      '🏕️ Settle into twin-sharing tents, explore the camp surroundings',
-      '🚶 Evening riverside walk & light yoga to decompress',
-      '🔥 Bonfire night with snacks, soft music & open skies',
-      '🛏️ Overnight in tents, river sounds as your lullaby'
+      '🌃 Start journey from Delhi (late night/early morning)',
+      '🛣️ Drive through Haridwar, Devprayag, Rudraprayag',
+      '🏞️ Follow scenic route alongside Alaknanda River',
+      '🏔️ Arrive in Joshimath by evening (14-15 hrs drive)',
+      '🏨 Check-in, freshen up, and relax',
+      '🛏️ Overnight stay in Joshimath'
     ],
     images: [
-      'https://images.unsplash.com/photo-1504851149312-7a075b496cc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-      'https://images.unsplash.com/photo-1487730116645-74489c95b41b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
+      'https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      'https://media.istockphoto.com/id/539105384/photo/kedarnath-in-india.webp?a=1&b=1&s=612x612&w=0&k=20&c=Yl1F8IUm07hk1rX0q6LBiGbMYnie4Ormbxhiq4Kg_Ls='
     ],
-    places: ['Devprayag - 35KM', 'Kaudiyala -10KM']
+    places: ['Haridwar - 240KM', 'Devprayag - 320KM', 'Rudraprayag - 380KM', 'Joshimath - 520KM']
   },
   {
     day: 2,
-    title: 'Waterfall Hike & Rafting Adventure - Neergarh, Shivpuri, Rishikesh',
-    description: 'A day of adrenaline and pure mountain energy. Connect with the elements - water, wind, and wildness.',
+    title: 'Auli Excursion + Drive to Chopta - Snowy Thrills & Alpine Serenity',
+    description: 'A day of snowy thrills and alpine serenity. Experience skiing, snow fun, and breathtaking views of Nanda Devi and Hathi Ghoda Peaks.',
     mood: 'Adventure',
     activities: [
-      '🌅 Sunrise warm-up & meditation near the river',
-      '🥾 Guided trek to a secluded waterfall (1.5 hrs)',
-      '🍽️ Return for a wholesome lunch at camp',
-      '🚣 Rafting the Ganga Grade II-III rapids (2 hrs)',
-      '🏃 Optional cliff jumping at designated safe spot',
-      '📖 Evening free time to journal, chill or dip toes in the river',
-      '🏕️ Overnight in tents'
+      '🍽️ After breakfast, take ropeway to Auli or drive (10-12 km)',
+      '⛷️ Enjoy skiing (seasonal), snow fun activities',
+      '🏔️ Views of Nanda Devi, Hathi Ghoda Peaks',
+      '🥾 Optional Gurson Bugyal trek',
+      '🚗 Afternoon: Drive to Chopta (4-5 hrs)',
+      '🌲 Reach by evening, soak in forest vibes',
+      '🏨 Overnight stay in Chopta'
     ],
     images: [
-      'https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-      'https://images.unsplash.com/photo-1487730116645-74489c95b41b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
+      'https://media.istockphoto.com/id/513247652/photo/panoramic-beautiful-view-of-mount-ama-dablam.webp?a=1&b=1&s=612x612&w=0&k=20&c=8OGGkQYFuXs69Xwyz3irBAtpSLXxZFw3LKhBnPT7cy8=',
+      'https://plus.unsplash.com/premium_photo-1661810803959-f91f5195138e?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8VXR0cmFraGFuZCUyMG1vdW50YWluJTIwdHJla2tpbmd8ZW58MHx8MHx8fDA%3D'
     ],
-    places: ['Shivpuri - 5KM', 'Rishikesh - 25KM']
+    places: ['Auli - 12KM', 'Chopta - 200KM']
   },
   {
     day: 3,
-    title: 'Village Immersion & Mountain Trek - Himalayan Villages',
-    description: 'Experience authentic mountain culture and connect with local communities while exploring scenic trails.',
-    mood: 'Cultural',
+    title: 'Tungnath Trek & Drive to Kanatal - Spiritual Height & Peaceful Escape',
+    description: 'Spiritual height and peaceful escape. Trek to the world\'s highest Shiva temple and enjoy 360° snow views from Chandrashila Peak.',
+    mood: 'Spiritual',
     activities: [
-      '🌄 Early morning yoga session overlooking the valley',
-      '🚶 Trek to nearby traditional Garhwali village (2 hrs)',
-      '🏠 Visit local homes, interact with families',
-      '🥘 Traditional lunch prepared by village women',
-      '🎨 Learn local crafts and farming techniques',
-      '🌅 Sunset viewpoint hike with panoramic mountain views',
-      '🏕️ Return to base camp for dinner and rest'
+      '🌅 Start early for Tungnath trek (3.5 km one way)',
+      '🛕 Visit highest Shiva temple in the world',
+      '⛰️ Continue to Chandrashila Peak (optional)',
+      '📸 360° snow views from the summit',
+      '🍽️ Return, lunch break at Chopta',
+      '🚗 Drive to Kanatal (5-6 hrs)',
+      '🔥 Evening peaceful campfire',
+      '🏨 Overnight stay in Kanatal'
     ],
     images: [
-      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-      'https://images.unsplash.com/photo-1464822759444-d93c0723395b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
+      'https://media.istockphoto.com/id/539105384/photo/kedarnath-in-india.webp?a=1&b=1&s=612x612&w=0&k=20&c=Yl1F8IUm07hk1rX0q6LBiGbMYnie4Ormbxhiq4Kg_Ls=',
+      'https://images.unsplash.com/photo-1625927759551-029744579e91?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGJvbmZpcmUlMjBjYW1waW5nJTIwSW5kaWF8ZW58MHx8MHx8fDA%3D'
     ],
-    places: ['Kanatal - 45KM', 'Dhanaulti - 40KM']
+    places: ['Tungnath Temple - 3.5KM Trek', 'Chandrashila Peak - 5KM Trek', 'Kanatal - 250KM']
   },
   {
     day: 4,
-    title: 'High Altitude Adventure & Forest Exploration',
-    description: 'Push your limits with challenging treks and discover the pristine beauty of Himalayan forests.',
-    mood: 'Challenging',
+    title: 'Kanatal to Mussoorie to Rishikesh - From Mountain Charm to River Peace',
+    description: 'From mountain charm to river peace. Explore the Queen of Hills and witness the divine Ganga Aarti in the yoga capital of the world.',
+    mood: 'Cultural',
     activities: [
-      '🌅 Pre-dawn start for high altitude trek (4 hrs)',
-      '🏔️ Reach scenic viewpoint at 2800m altitude',
-      '📸 Photography session with snow-capped peaks',
-      '🥪 Packed lunch at the summit',
-      '🌲 Descend through dense deodar forests',
-      '🦅 Wildlife spotting and bird watching',
-      '🔥 Final night bonfire with group reflections'
+      '🍽️ After breakfast, head to Mussoorie (2 hrs)',
+      '💧 Quick visit to Kempty Falls',
+      '🛍️ Explore Mall Road for shopping and local food',
+      '🚠 Visit Gun Hill via cable car',
+      '🚗 Drive to Rishikesh (2.5-3 hrs)',
+      '🕯️ Reach in time for Ganga Aarti at Triveni Ghat',
+      '🌉 Optional visits: Laxman Jhula, café hopping',
+      '🏨 Overnight stay in Rishikesh'
     ],
     images: [
-      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-      'https://images.unsplash.com/photo-1454391304352-2bf4678b1a7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
+      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      'https://plus.unsplash.com/premium_photo-1661913065271-2c265f232373?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHlvZ2ElMjBieSUyMHJpdmVyfGVufDB8fDB8fHww'
     ],
-    places: ['Mussoorie - 60KM', 'Kempty Falls - 55KM']
+    places: ['Mussoorie - 60KM', 'Kempty Falls - 65KM', 'Rishikesh - 230KM']
   },
   {
     day: 5,
-    title: 'Departure & Farewell - Return to Dehradun',
-    description: 'A peaceful morning to reflect on your journey before heading back to the plains.',
+    title: 'Rishikesh to Delhi - Wrap-up with Memories',
+    description: 'Wrap-up with memories. End your journey with moments from snowy peaks to sacred rivers, carrying the essence of the Himalayas back home.',
     mood: 'Reflective',
     activities: [
-      '🌅 Sunrise meditation by the river',
-      '☕ Farewell breakfast with the group',
-      '📦 Pack up and camp cleanup',
-      '🚌 Scenic drive back to Dehradun (3 hrs)',
-      '🍽️ Lunch stop at a local dhaba',
-      '🚉 Drop-off at Dehradun ISBT/Railway Station',
-      '👋 Goodbye with memories that last a lifetime'
+      '🍽️ Breakfast at stay',
+      '📦 Pack up and check-out',
+      '🚗 Drive back to Delhi (5-6 hrs)',
+      '🍽️ Lunch stop at highway dhaba',
+      '🏙️ Reach Delhi by evening',
+      '👋 Trip ends with memories from snowy peaks to sacred rivers'
     ],
     images: [
-      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
+      'https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      'https://media.istockphoto.com/id/513247652/photo/panoramic-beautiful-view-of-mount-ama-dablam.webp?a=1&b=1&s=612x612&w=0&k=20&c=8OGGkQYFuXs69Xwyz3irBAtpSLXxZFw3LKhBnPT7cy8='
     ],
-    places: ['Dehradun ISBT', 'Dehradun Railway Station']
+    places: ['Delhi - 240KM']
   }
 ];
 
 // Things to know data
 const includedItems = [
-  'Pickup & drop (Dehradun to Camp)',
-  'All accommodations (3 nights in alpine tents)',
-  'All meals (Day 1 lunch to Day 4 breakfast)',
-  'Rafting with safety gear',
-  'Certified guides and trek leaders',
-  'Bonfire night, music, and games',
-  'Local cultural tour',
-  'Entry fees, forest permits'
+  'Accommodation in Hotel/Camp (quad sharing)',
+  '3/4/5 Star Hotels (as applicable)',
+  'Meals as per itinerary',
+  'Travel by Force Tempo Traveller',
+  'Sightseeing & transfers',
+  'Train fare (Sleeper/3AC)',
+  'All inner line permits',
+  'All tolls, driver charges, and taxes'
 ];
 
 const notIncludedItems = [
-  'Meals during travel',
-  'Personal expenses (snacks, souvenirs)',
-  'Medical/Travel insurance',
-  'Extra adventure activities (on request)',
-  'Tips and optional donations'
+  'Camera fees, sightseeing entry tickets',
+  'Meals not mentioned in itinerary',
+  'Personal expenses (laundry, luggage, calls, etc.)',
+  'Costs due to itinerary changes (weather, roadblocks, etc.)',
+  'Additional accommodation/food due to delays',
+  'Room heater charges',
+  'Travel/Medical Insurance',
+  'Applicable GST',
+  'Anything not listed under "Inclusions"'
 ];
 
 const TourContent = () => {
@@ -138,27 +142,28 @@ const TourContent = () => {
       <section id="overview" className="scroll-mt-44 2xl:scroll-mt-52 text-sm sm:text-base lg:text-lg 2xl:text-xl sm:mt-6 2xl:mt-8">
         <div className="space-y-3 sm:space-y-4 2xl:space-y-6 text-[#000000] leading-relaxed 2xl:leading-loose text-justify">
           <p>
-            The Himalayan Adventure Retreat is more than just a trip — it&apos;s a soul-
-            refreshing journey into the heart of the majestic Garhwal Himalayas. Designed
-            for nature lovers, thrill seekers, and those looking to disconnect from the
-            chaos of everyday life, this 5-day adventure offers a powerful blend of
-            adrenaline-pumping activities, serene landscapes, and local cultural
-            immersion.
+            The Roamevo Uttarakhand 2025 is more than just a trip — it&apos;s a 
+            comprehensive journey from the bustling capital to the serene Himalayas. 
+            Starting your adventure from Delhi, this 5-day retreat takes you through 
+            sacred confluences, snow-capped peaks, spiritual heights, and cultural 
+            encounters across the most beautiful destinations of Uttarakhand.
           </p>
 
           <p>
-            Your journey begins in Dehradun, from where we drive through winding roads
-            surrounded by pine forests and river valleys to our peaceful riverside base
-            camp in Byasi. Here, you&apos;ll experience the thrill of white-water river
-            rafting on the Ganga, hikes to hidden waterfalls, and morning yoga sessions by
-            the river. Dive deep into the Himalayan lifestyle with a guided village visit,
-            where you&apos;ll connect with locals and learn about their traditions.
+            Your journey begins in Delhi, passing through the holy city of Haridwar, 
+            the sacred confluences of Devprayag and Rudraprayag, tracing the pristine 
+            Alaknanda River upstream to reach Joshimath. Experience the thrill of 
+            skiing in Auli with breathtaking views of Nanda Devi, trek to the world&apos;s 
+            highest Shiva temple at Tungnath, and witness the divine Ganga Aarti in 
+            Rishikesh — the yoga capital of the world.
           </p>
 
           <p>
-            From misty sunrise treks to mountain viewpoints, to spontaneous laughter
-            over hot chai with fellow travelers, this experience is crafted to help you reset,
-            recharge, and reconnect — with nature and yourself.
+            From snowy alpine adventures to spiritual temple visits, from mountain 
+            hill stations to riverside serenity, this carefully crafted itinerary 
+            offers the perfect blend of adventure, spirituality, and natural beauty. 
+            Each destination tells a unique story, creating memories that will last 
+            a lifetime.
           </p>
         </div>
       </section>
