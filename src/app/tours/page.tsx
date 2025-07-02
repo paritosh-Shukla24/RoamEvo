@@ -24,8 +24,8 @@ export default function UttarakhandTourPage() {
       alt: 'Uttarakhand Himalayan peaks - Main tour destination'
     },
     {
-      src: 'https://media.istockphoto.com/id/539105384/photo/kedarnath-in-india.webp?a=1&b=1&s=612x612&w=0&k=20&c=Yl1F8IUm07hk1rX0q6LBiGbMYnie4Ormbxhiq4Kg_Ls=', 
-      alt: 'Kedarnath temple in Uttarakhand - Sacred mountain destination'
+      src: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
+      alt: 'Sacred Hindu temple in mountains - Uttarakhand spiritual journey'
     },
     {
       src: 'https://images.unsplash.com/photo-1718383537411-6f9e727ae0bb?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cml2ZXIlMjByYWZ0aW5nJTIwZ2FuZ2F8ZW58MHx8MHx8fDA%3D', 
@@ -44,20 +44,16 @@ export default function UttarakhandTourPage() {
       alt: 'Traditional Uttarakhand village - Day 3 cultural immersion experience'
     },
     {
-      src: 'https://plus.unsplash.com/premium_photo-1697729690458-2d64ca777c04?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHV0dGFyYWtoYW5kJTIwdmlsbGFnZXxlbnwwfHwwfHx8MA%3D%3D', 
-      alt: 'Mountain village life in Uttarakhand - Local community interaction'
+      src: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
+      alt: 'Traditional mountain village houses - Local cultural experience'
     },
     {
       src: 'https://images.unsplash.com/photo-1625927759551-029744579e91?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGJvbmZpcmUlMjBjYW1waW5nJTIwSW5kaWF8ZW58MHx8MHx8fDA%3D', 
       alt: 'Bonfire camping in India - Evening group activities Day 1 & 4'
     },
     {
-      src: 'https://plus.unsplash.com/premium_photo-1661810803959-f91f5195138e?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8VXR0cmFraGFuZCUyMG1vdW50YWluJTIwdHJla2tpbmd8ZW58MHx8MHx8fDA%3D', 
-      alt: 'Mountain trekking in Uttarakhand - Day 4 forest exploration'
-    },
-    {
-      src: 'https://plus.unsplash.com/premium_photo-1661913065271-2c265f232373?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHlvZ2ElMjBieSUyMHJpdmVyfGVufDB8fDB8fHww', 
-      alt: 'Yoga by the river - Daily sunrise meditation sessions'
+      src: 'https://images.unsplash.com/photo-1454391304352-2bf4678b1a7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
+      alt: 'Himalayan trekking trail through forests - Adventure hiking experience'
     },
     {
       src: 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
