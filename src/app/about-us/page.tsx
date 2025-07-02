@@ -1,5 +1,28 @@
+import { Metadata } from 'next';
 // import MeetTheTeam from '@/components/MeetTheTeam';
 import ExperienceStats from '@/components/ExperienceStats';
+
+export const metadata: Metadata = {
+  title: "About Roamevo | Himalayan Adventure Travel Experts & Mountain Guides",
+  description: "Meet the Roamevo team - passionate Himalayan travel experts specializing in authentic mountain adventures, cultural immersion, and small-group nature escapes across India's most stunning destinations.",
+  keywords: ["about Roamevo", "Himalayan travel experts", "mountain adventure guides", "India travel company", "authentic travel experiences", "small group tours", "nature escapes"],
+  openGraph: {
+    title: "About Roamevo | Himalayan Adventure Travel Experts & Mountain Guides",
+    description: "Meet the passionate team behind Roamevo - curators of unforgettable Himalayan journeys and authentic mountain adventures across India.",
+    url: "https://roamevo.in/about-us",
+    images: [
+      {
+        url: "https://roamevo.in/images/about.png",
+        width: 1200,
+        height: 630,
+        alt: "Roamevo team - Himalayan adventure travel experts",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://roamevo.in/about-us",
+  },
+};
 
 export default function AboutUsPage() {
   return (

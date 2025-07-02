@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import Breadcrumb from '@/components/Tours/Breadcrumb';
 import TourHeader from '@/components/Tours/TourHeader';
 import TourGallery from '@/components/Tours/TourGallery';
@@ -7,6 +8,29 @@ import TourPricing from '@/components/Tours/TourPricing';
 import TripVibeCheck from '@/components/Tours/TripVibeCheck';
 import ThingsToCarry from '@/components/Tours/ThingsToCarry';
 import LiveTripSection from '@/components/Tours/LiveTripSection';
+import StructuredData from '@/components/StructuredData';
+
+export const metadata: Metadata = {
+  title: "Uttarakhand Adventure Tour 2025 | 5-Day Himalayan Trek & River Rafting",
+  description: "Experience the ultimate Uttarakhand adventure! 5-day tour from Delhi to Joshimath, Auli, Chopta & Tungnath. Includes river rafting, trekking, camping, and cultural immersion. Book now at ₹17,999.",
+  keywords: ["Uttarakhand tour package", "Auli skiing", "Tungnath trek", "Chopta camping", "Ganga river rafting", "Himalayan adventure", "Delhi to Uttarakhand tour", "mountain trekking India"],
+  openGraph: {
+    title: "Uttarakhand Adventure Tour 2025 | 5-Day Himalayan Trek & River Rafting",
+    description: "Experience the ultimate Uttarakhand adventure! 5-day tour includes Auli skiing, Tungnath trek, river rafting, and cultural immersion. Starting at ₹17,999.",
+    url: "https://roamevo.in/tours",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        width: 1200,
+        height: 630,
+        alt: "Uttarakhand Himalayan peaks - Adventure tour destination",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://roamevo.in/tours",
+  },
+};
 
 export default function UttarakhandTourPage() {
   // Breadcrumb items for Uttarakhand 2025 tour
@@ -17,6 +41,64 @@ export default function UttarakhandTourPage() {
     { label: 'Chopta', href: '/destinations/chopta' },
     { label: 'Uttarakhand', href: '/destinations/uttarakhand' },
   ];
+
+  // Structured data for the tour package
+  const tourStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    "name": "Roamevo Uttarakhand 2025 - 5-Day Himalayan Adventure",
+    "description": "Experience the ultimate Uttarakhand adventure! 5-day tour from Delhi to Joshimath, Auli, Chopta & Tungnath. Includes river rafting, trekking, camping, and cultural immersion.",
+    "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    "provider": {
+      "@type": "TravelAgency",
+      "name": "Roamevo",
+      "url": "https://roamevo.in"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "17999",
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock",
+      "priceValidUntil": "2025-12-31",
+      "description": "5-day Uttarakhand adventure tour including accommodation, transport, activities, and meals"
+    },
+    "itinerary": [
+      {
+        "@type": "TouristDestination",
+        "name": "Delhi to Joshimath",
+        "description": "Journey through Haridwar, Devprayag, Rudraprayag to reach Joshimath"
+      },
+      {
+        "@type": "TouristDestination", 
+        "name": "Auli Excursion",
+        "description": "Skiing, Nanda Devi views, Gurson Bugyal trek, then drive to Chopta"
+      },
+      {
+        "@type": "TouristDestination",
+        "name": "Tungnath Trek",
+        "description": "Trek to highest Shiva temple and Chandrashila Peak, drive to Kanatal"
+      },
+      {
+        "@type": "TouristDestination",
+        "name": "Kanatal to Rishikesh",
+        "description": "Visit Kempty Falls, Mall Road Mussoorie, Ganga Aarti in Rishikesh"
+      },
+      {
+        "@type": "TouristDestination",
+        "name": "Rishikesh to Delhi",
+        "description": "Return journey to Delhi with lifetime memories"
+      }
+    ],
+    "duration": "P5D",
+    "startLocation": {
+      "@type": "Place",
+      "name": "Delhi, India"
+    },
+    "endLocation": {
+      "@type": "Place", 
+      "name": "Delhi, India"
+    }
+  };
   // Tour gallery images based on actual Uttarakhand adventure itinerary
   const tourImages = [
     {
@@ -67,6 +149,7 @@ export default function UttarakhandTourPage() {
 
   return (
     <div className="bg-white">
+      <StructuredData data={tourStructuredData} />
       <div className="pb-6 sm:pb-8 lg:pb-12 2xl:pb-16 container mx-auto px-3 sm:px-4 lg:px-6 2xl:px-8 max-w-7xl 2xl:max-w-[1600px]">
         <Breadcrumb items={breadcrumbItems} />
         

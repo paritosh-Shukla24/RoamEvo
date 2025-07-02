@@ -1,3 +1,23 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "International Tours Coming Soon | Roamevo Global Adventures",
+  description: "Exciting international tour packages coming soon! Contact Roamevo at +91 9665398773 for inquiries about upcoming global adventure destinations and travel experiences.",
+  keywords: ["international tours", "global adventures", "overseas travel packages", "Roamevo international", "coming soon tours"],
+  openGraph: {
+    title: "International Tours Coming Soon | Roamevo Global Adventures",
+    description: "Exciting international tour packages coming soon! Contact us for inquiries about upcoming global adventure destinations.",
+    url: "https://roamevo.in/international-tours",
+  },
+  alternates: {
+    canonical: "https://roamevo.in/international-tours",
+  },
+  robots: {
+    index: false, // Don't index this coming soon page
+    follow: true,
+  },
+};
+
 export default function ComingSoonPage() {
   return (
     <div className="flex flex-col min-h-screen bg-[#f9f9f5]">

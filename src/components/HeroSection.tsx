@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import SearchBar from './SearchBar';
 import LocationPin from './LocationPin';
 import SocialLinks from './SocialLinks';
@@ -16,9 +17,12 @@ const HeroSection = ({ currentLocation = "Mountain Adventures" }: HeroSectionPro
         
         <div className="flex flex-col md:flex-row gap-4 items-center justify-center mb-24">
           <SearchBar />
-          <button className="bg-[#101349] hover:bg-[#2a3761] text-white px-8 py-2.5 rounded-full transition">
+          <Link 
+            href="/tours" 
+            className="bg-[#101349] hover:bg-[#2a3761] text-white px-8 py-2.5 rounded-full transition inline-block"
+          >
             Explore Packages
-          </button>
+          </Link>
         </div>
       </div>
       

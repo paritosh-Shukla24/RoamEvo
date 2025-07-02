@@ -18,7 +18,7 @@ const TourCardComponent = ({ destination, rating, reviews, title, imageSrc, pric
       <div className="relative h-64 w-full overflow-hidden rounded-lg">
         <Image 
           src={imageSrc} 
-          alt={title} 
+          alt={`${title} - ${destination} tour package featuring ${itinerary.map(stop => stop.city).join(', ')} destinations`}
           fill
           style={{ objectFit: "cover" }}
           className="rounded-lg"
