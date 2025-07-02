@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://roamevo.in
+
+# Sitemaps
+Sitemap: https://roamevo.in/sitemap.xml
