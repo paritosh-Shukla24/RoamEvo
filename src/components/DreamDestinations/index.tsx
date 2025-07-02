@@ -48,15 +48,15 @@ const DreamDestinations = () => {
           <div className="md:col-span-6">
             <Link href="/tours" className="block rounded-[32px] overflow-hidden h-[580px] relative hover:scale-105 transition-transform duration-300">
               <Image
-                src="/tours/grand.png" 
-                alt="Grand Himalayan tour packages - Scenic mountain landscapes and spiritual destinations"
+                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                alt="Himalayan mountain peaks adventure tours - Snow-capped summits and alpine trekking experiences"
                 fill
                 style={{ objectFit: 'cover' }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               <div className="absolute bottom-4 left-4 text-white">
-                <h3 className="text-2xl font-semibold">Grand Himalayan Tours</h3>
-                <p className="text-base opacity-90">Majestic peaks & spiritual journeys</p>
+                <h3 className="text-2xl font-semibold">Himalayan Adventures</h3>
+                <p className="text-base opacity-90">Snow-capped peaks & alpine treks</p>
               </div>
             </Link>
           </div>
